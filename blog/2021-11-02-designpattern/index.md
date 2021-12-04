@@ -1,7 +1,7 @@
 ---
 slug: designpattern
 title: What is Design Pattern ?
-authors: [seongkyu-lim]
+authors: [seongkyu]
 tags: [design pattern]
 ---
 
