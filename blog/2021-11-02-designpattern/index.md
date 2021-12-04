@@ -1,3 +1,10 @@
+---
+slug: designpattern
+title: What is Design Pattern ?
+authors: [seongkyu-lim]
+tags: [design pattern]
+---
+
 # 디자인 패턴이란 ?
 
 ### 디자인 패턴을 왜 배워야할까 ?
@@ -16,15 +23,13 @@
 
 ### OOP(객체 지향 프로그래밍)란 ?
 
-**객체 지향 프로그래밍**([영어](https://ko.wikipedia.org/wiki/%EC%98%81%EC%96%B4): Object-Oriented Programming, OOP)은 [컴퓨터 프로그래밍](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)의 [패러다임](https://ko.wikipedia.org/wiki/%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84) 중 하나이다. 객체 지향 프로그래밍은 [컴퓨터 프로그램](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8)을 [명령어](https://ko.wikipedia.org/wiki/%EB%AA%85%EB%A0%B9%EC%96%B4_(%EC%BB%B4%ED%93%A8%ED%8C%85))의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 "[객체](https://ko.wikipedia.org/wiki/%EA%B0%9D%EC%B2%B4_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99))"들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 [메시지](https://ko.wikipedia.org/wiki/%EB%A9%94%EC%8B%9C%EC%A7%80)를 주고받고, [데이터](https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0)를 처리할 수 있다.
+**객체 지향 프로그래밍**([영어](https://ko.wikipedia.org/wiki/%EC%98%81%EC%96%B4): Object-Oriented Programming, OOP)은 컴퓨터 프로그래밍의 패러다임중 하나이다. 객체 지향 프로그래밍은 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 "객체"들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있다.
 
-객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 [소프트웨어 개발](https://ko.wikipedia.org/wiki/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B0%9C%EB%B0%9C)에 많이 사용된다. 또한 프로그래밍을 더 배우기 쉽게 하고 소프트웨어 개발과 보수를 간편하게 하며, 보다 직관적인 [코드](https://ko.wikipedia.org/wiki/%EC%86%8C%EC%8A%A4_%EC%BD%94%EB%93%9C) 분석을 가능하게 하는 장점을 갖고 있다. 그러나 지나친 프로그램의 객체화 경향은 실제 세계의 모습을 그대로 반영하지 못한다는 비판을 받기도 한다.[[위키피디아](https://ko.wikipedia.org/wiki/객체_지향_프로그래밍)] 
+객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용된다. 또한 프로그래밍을 더 배우기 쉽게 하고 소프트웨어 개발과 보수를 간편하게 하며, 보다 직관적인 코드 분석을 가능하게 하는 장점을 갖고 있다. 그러나 지나친 프로그램의 객체화 경향은 실제 세계의 모습을 그대로 반영하지 못한다는 비판을 받기도 한다.[위키피디아](https://ko.wikipedia.org/wiki/객체_지향_프로그래밍)
 
-![Untitled](%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%A2%E1%84%90%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A1%E1%86%AB%20b37b4cfb3ca34f98aa79634b3f2f5dce/Untitled.png)
-
-![Untitled](%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%A2%E1%84%90%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A1%E1%86%AB%20b37b4cfb3ca34f98aa79634b3f2f5dce/Untitled%201.png)
-
-![Untitled](%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%A2%E1%84%90%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A1%E1%86%AB%20b37b4cfb3ca34f98aa79634b3f2f5dce/Untitled%202.png)
+![Untitled.png](Untitled.png)
+![Untitled1.png](Untitled 1.png)
+![Untitled2.png](Untitled 2.png)
 
 cf) C언어 : 절차지향적 프로그래밍 ( 함수단위로 순서대로 진행 )
 
@@ -67,7 +72,7 @@ cf) C언어 : 절차지향적 프로그래밍 ( 함수단위로 순서대로 진
 
 소프트웨어 분야에서 디자인 패턴이라는 용어가 유명해진 계기는 GOF, **Design Patterns: Elements of Reusable Object-Oriented Software** 라는 책이 출판되면서 부터이다. 책의 제목에서 유추할 수 있듯이 이 책에서 제안하는 디자인 패턴들은 가독성 및 효율성 뿐만 아니라 OOP에서 코드의 재사용성을 높이는 것을 고려하여 패턴화 하였다.
 
-![스크린샷 2021-10-17 오전 9.41.06.png](%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%A2%E1%84%90%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A1%E1%86%AB%20b37b4cfb3ca34f98aa79634b3f2f5dce/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-10-17_%EC%98%A4%EC%A0%84_9.41.06.png)
+![book.png](book.png)
 
 즉, 프로그래밍분야의 디자인 패턴의 틀을 만들었다고 할 수 있는 이 책에서 디자인 패턴은 OOP 프로그래밍 방식과 아주 잘 어울리는 개념이라 할 수 있다.
 

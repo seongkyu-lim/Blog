@@ -9,12 +9,12 @@ const config = {
   title: 'Seongkyu-lim',
   tagline: 'Backend Developer',
   url: 'https://seongkyu-lim.github.io',
-  baseUrl: '/Blog',
+  baseUrl: '/Blog/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'seongkyu-lim', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  projectName: 'Blog', // Usually your repo name.
 
   presets: [
     [
