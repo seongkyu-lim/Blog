@@ -28,8 +28,8 @@ tags: [design pattern]
 객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용된다. 또한 프로그래밍을 더 배우기 쉽게 하고 소프트웨어 개발과 보수를 간편하게 하며, 보다 직관적인 코드 분석을 가능하게 하는 장점을 갖고 있다. 그러나 지나친 프로그램의 객체화 경향은 실제 세계의 모습을 그대로 반영하지 못한다는 비판을 받기도 한다.[위키피디아](https://ko.wikipedia.org/wiki/객체_지향_프로그래밍)
 
 ![Untitled.png](Untitled.png)
-![Untitled1.png](Untitled 1.png)
-![Untitled2.png](Untitled 2.png)
+![Untitled1.png](Untitled1.png)
+![Untitled2.png](Untitled2.png)
 
 cf) C언어 : 절차지향적 프로그래밍 ( 함수단위로 순서대로 진행 )
 
