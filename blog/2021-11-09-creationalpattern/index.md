@@ -1,6 +1,6 @@
 ---
-slug: designpattern
-title: What is Design Pattern ?
+slug: creational-pattern
+title: Creational pattern 
 authors: [seongkyu]
 tags: [design pattern, creational pattern]
 ---

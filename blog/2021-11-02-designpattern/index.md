@@ -1,5 +1,5 @@
 ---
-slug: designpattern
+slug: design-pattern
 title: What is Design Pattern ?
 authors: [seongkyu]
 tags: [design pattern]
