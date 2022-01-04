@@ -2,70 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seongkyu-lim.github.io/Blog/blog</id>
     <title>Seongkyu-lim Blog</title>
-    <updated>2021-11-09T00:00:00.000Z</updated>
+    <updated>2021-01-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seongkyu-lim.github.io/Blog/blog"/>
     <subtitle>Seongkyu-lim Blog</subtitle>
     <icon>https://seongkyu-lim.github.io/Blog/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[Creational pattern]]></title>
-        <id>creational-pattern</id>
-        <link href="https://seongkyu-lim.github.io/Blog/blog/creational-pattern"/>
-        <updated>2021-11-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Creational Pattern]]></summary>
-        <content type="html"><![CDATA[<h2>Creational Pattern</h2><ul><li>생성 패턴은 인스턴스를 만드는 절차를 <strong>추상화</strong>하는 패턴입니다.</li><li>객체를 생성, 합성하는 방법이나 객체의 표현 방법과 시스템(소프트웨어)(user)을 분리해 줍니다.</li></ul><hr/><ul><li>생성 패턴은 시스템이 어떤 구체 클래스를 사용하는지에 대한 정보를 <strong>캡슐화</strong>합니다.</li><li>생성 패턴은 이들 클래스의 인스턴스들이 어떻게 만들고 어떻게 서로 맞붙는지에 대한 부분을 완전히 가려줍니다.</li></ul><p>→ 생성 패턴을 이용하면 무엇이 생성되고, 누가 이것을 생성하며, 이것이 어떻게 생성되는지, 언제 생성할 것인지 결정하는 데 유연성을 확보할 수 있게 됩니다.</p><hr/><ul><li>생성 패턴으로 분류되는 패턴은 여러 개인데, 이런 여러 생성 패턴들은 서로 보완적일 수도 있고 선택되기 위해 서로 경쟁적일 수도 있습니다. 즉, 동일한 문제 해결을 위해서 어떤 생성 패턴을 사용해야 할지 결정을 내리기 어렵습니다.</li><li>생성 패턴 간에는 매우 밀접한 관련성이 있습니다. (어떠한 패턴을 구현하는데 다른 패턴을 이용)</li></ul><h2>Abstract Factory</h2><aside> 💡 구체적인 클래스를 지정하지 않고 관련성을 갖는 객체들의 **집합**을 생성하거나 서로 독립적인 객체들의 **집합**을 생성할 수 있는 **인터페이스**를 제공하는 패턴입니다.</aside><hr/><h3>활용성</h3><ul><li>객체가 생성되거나 구성, 표현되는 방식과 무관하게 시스템을 독립적으로 만들고자 할 때</li><li>여러 제품군 중 하나를 선택해서 시스템을 설정해야 하고 한번 구성한 제품을 다른 것으로 대체할 수 있을 때</li><li>관련된 제품 객체들이 함께 사용되도록 설계되었고, 이 부분에 대한 제약이 외부에도 지켜지도록 하고 싶을 때</li><li>제품에 대한 클래스 라이브러리를 제공하고, 그들의 구현이 아닌 인터페이스를 노출시키고 싶을 때</li></ul><p>→ 여기서 말하는 제품은 특정 product (예제에서는 CPU, MMU)</p><hr/><h3>예제 <!-- -->[ Java ]</h3><p>CPU, MMU 객체는 기존에 존재.</p><p>EMBERToolKit, EnginolaToolKit 과같은 생성할 객체의 클래스는 캡슐화 되어 사용자로부터 분리되었습니다.</p><p>(toolkit class → abstract factory → user)</p><ul><li>abstract factory(AbstractFactory): 개념적 제품에 대한 객체를 생성하는 연산으로 <strong>인터페이스</strong>를 정의합니다.</li><li>Concrete factory(EnginolaToolKit, EmberToolKit): 구체적인 제품에 대한 객체를 생성하는 연산을 구현합니다.</li><li>AbstractProduct(CPU, MMU): 개념적 제품 객체에 대한 인터페이스를 정의합니다.</li><li>ConcreteProduct(EmberCPU, EmberMMU, EnginolaCPU, EnginolaMMU): 구체적으로 팩토리가 생성할 객체를 정의하고, AbstractProduct가 정의하는 인터페이스를 구현합니다.</li><li>Client: AbstractFactory와 AbstractProduct 클래스에 선언된 인터페이스를 사용합니다.</li></ul><p><img src="abstractfactory_code_1.png" alt="abstractfactory_code_1.png"/>
-<img src="abstractfactory_code_2.png" alt="abstractfactory_code_2.png"/>
-<img src="abstractfactory_code_3.png" alt="abstractfactory_code_3.png"/></p><p>출처 : <a href="https://sourcemaking.com/design_patterns/abstract_factory/java/1">Design Patterns and Refactoring</a></p><hr/><h3>Abstract factory 패턴을 사용함으로써 얻는 이익과 부담.</h3><ul><li>구체적인 클래스(concrete class)를 분리합니다.</li><li>제품군을 쉽게 대체할 수 있도록 합니다.</li><li>제품 사이의 일관성을 증진시킵니다.</li><li>새로운 종류의 제품을 제공하기 어렵습니다.</li></ul><p>→ 여기서 말하는 제품은 특정 product (예제에서는 CPU, MMU)</p><hr/><h3>관련패턴</h3><p>AbstractFactory 클래스는 <strong>factory method</strong> 패턴을 이용해서 구현되는데, <strong>prototype 패턴</strong>을 이용할 때도 있습니다. concrete 팩토리는 <strong>singleton 패턴</strong>을 이용해 구현하는 경우가 많습니다.</p><h2>Factory Method</h2><aside> 💡 객체를 생성하는 인터페이스는 미리 정의하되, 인스턴스를 만들 클래스의 결정은 **서브클래스** 쪽에서 내리는 패턴입니다. 팩토리 메서드 패턴에서는 클래스의 인스턴스를 만드는 시점을 서브클래스로 미룹니다.</aside><hr/><h3>활용성</h3><ul><li>어떤 클래스가 자신이 생성해야 하는 객체의 클래스를 미리 예측할 수 없을 때</li><li>생성할 객체를 기술하는 책임을 자신의 서브클래스가 지정했으면 할 때</li><li>객체 생성의 책임을 몇 개의 보조 서브클래스 가운데 하나에게 위임하고, 어떤 서브클래스가 위임자인지에 대한 정보를 국소화시키고 싶을 때</li></ul><hr/><h3>예제<!-- -->[ Java ]</h3><ul><li>Product(ImageReader) : 팩토리 메서드가 생성하는 객체의 인터페이스를 정의합니다.</li><li>ConcreteProduct(GifReader, JpegReader): Product 클래스에 정의된 인터페이스를 실제로 구현합니다.</li><li>Creater(FactoryMethodDemo): Product 타입의 객체를 반환하는 팩토리 메서드를 선언합니다. Creater  클래스는 팩토리 메서드를 기본적으로 구현하는데, 이 구현에서는 ConcreteProduct 객체를 반환합니다. 또한 Product 객체의 생성을 위해 팩토리 메서드를 호출합니다.</li><li>ConcreteCreator(): 팩토리 메서드를 재정의하여 ConcreteProduct의 인스턴스를 반환합니다.</li></ul><p>예제에서는 <strong>getDecodedImage</strong>가 <strong>factory method</strong>가 됩니다. 왜냐하면 객체를 제조하는 방법을 알기 때문입니다.</p><p><img src="factorymethod_code_1.png" alt="factorymethod_code_1.png"/>
-<img src="factorymethod_code_2.png" alt="factorymethod_code_2.png"/>
-<img src="factorymethod_code_3.png" alt="factorymethod_code_3.png"/></p><p>출처 : <a href="https://sourcemaking.com/design_patterns/factory_method/java/1">Design Patterns and Refactoring</a></p><hr/><h3>관련 패턴</h3><ul><li>abstract factory 패턴은 이 factory method를 이용하여 구현할 때가 많습니다.</li><li>팩토리 메서드는 템플릿 메서드 패턴에서도 사용될 때가 많습니다.</li></ul><hr/><h2>Builder</h2><p>복합 객체의 생성 과정과 표현 방법을 분리하여 동일한 생성 절차에서 서로 다른 표현 결과를 만들 수 있게 하는 패턴입니다.</p><aside> 💡 객체 <p>단일 객체 : 하나의 클래스로 생성된 객체 ( 객체는 데이터와 행동(메소드)를 가짐.)</p><p>복합 객체 : 하나의 객체가 다른 객체를 포함하는 관계 구조를 가지는 객체</p></aside><p>활용성</p><ul><li>복합 객체의 &quot;생성 알고리즘&quot;이 이를 합성하는 요소 객체들이 무엇인지 이들의 &quot;조립 방법&quot;에 독립적일 때</li><li>합성할 객체들의 표현이 서로 다르더라도 생성 절차에서 이를 지원해야 할 때</li></ul><p>참여자</p><ul><li>Builder: Product 객체의 일부 요소들을 생성하기 위한 추상인터페이스를 정의합니다.</li><li>ConcreteBuilder: Builder 클래스에 정의된 인터페이스를 구현하며, 제품의 부품들을 모아 빌더를 복합합니다. 생성한 요소의 표현을 정의하고 관리합니다. 또한 제품을 검색하는데 필요한 인터페이스를 제공합니다. ( 여기에 구체적인 복합 객체의 생성 방식이 지정됨.)</li><li>Director: Builder 인터페이스를 사용하는 객체를 표현합니다. ( 인스턴스 사용)</li><li>Product: 생성할 복합 객체를 표현합니다. ( 제품의 속성, 기능등을 가짐.)</li></ul><p><img src="builder_struc.png" alt="builder_struc.png"/></p><p>Director 객체를 생성하고, 생성한 객체를 자신이 원하는 Builder 객체로 합성해 나갑니다.</p><p>Product가 구축될 때마다 Director는 Builder에 통보합니다.</p><p>Builder는 Director의 요청을 처리하여 제품에 부품을 추가합니다.</p><p>사용자는 Builder에서 제품을 검색합니다.</p><p>예제</p><p>결과</p><ul><li>제품(Product)에 대한 내부 표현을 다양하게 변화할 수 있습니다.</li><li>생성과 표현에 필요한 코드를 분리합니다.</li><li>복합 객체를 생성하는 절차를 좀더 세밀하게 나눌 수 있습니다.</li></ul><p>관련 패턴</p><p>복잡한 객체를 생성해야 할 때 &#x27;추상 팩토리 패턴&#x27;은 &#x27;빌더 패턴&#x27;과 비슷한 모습을 보입니다. 근본적인 차이가 있다면 빌더 패턴은 복잡한 객체의 단계별 생성에 중점을 둔 반면, 추상 팩토리 패턴은 제품의 유사군들이 존재할 때 유연한 설계에 중점을 둔다는 것입니다. 빌더 패턴은 생성의 마지막 단계에서 생성한 제품을 반환하는 반면, 추상 팩토리 패턴에서는 만드는 즉시 제품을 반환합니다. 추상 팩토리 패턴에서 만드는 제품은 꼭 모여야만 의미 있는 것이 아니라 하나만으로도 의미가 있기 때문입니다.</p><h3>Prototype</h3><h3>Singleton</h3><hr/><h3>참고 자료</h3><p>[1]<!-- --> GoF의 디자인 패턴</p><p>[2][https://sourcemaking.com]<!-- -->(<a href="https://sourcemaking.com/">https://sourcemaking.com/</a>)</p>]]></content>
-        <author>
-            <name>Lim SeongKyu</name>
-            <uri>https://github.com/seongkyu-lim</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What is Design Pattern ?]]></title>
-        <id>design-pattern</id>
-        <link href="https://seongkyu-lim.github.io/Blog/blog/design-pattern"/>
-        <updated>2021-11-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[디자인 패턴을 왜 배워야할까 ?]]></summary>
-        <content type="html"><![CDATA[<h3>디자인 패턴을 왜 배워야할까 ?</h3><blockquote><p>디자인 패턴은 알고리즘이 아니라 상황에 따라 자주 쓰이는 설계 방법을 정리한 코딩 방법론<!-- -->[나무위키]<!-- -->.</p></blockquote><blockquote><p>오랫동안 여러 프로그래밍 문제들을 해결해오며 반복적인 문제들을 타입별로 카테고리화하여 해결방법을 패턴화 한 것.</p></blockquote><p>즉, 디자인 패턴을 익히면 프로그래밍적인 문제들을 장인들의 방법으로 접근하여 보다 쉽게 해결할 수 있다!</p><p>또한 디자인 패턴을 익히고 고려하며 코드를 짜면 효율적이며 가독성이 좋고, 재사용성이 높은 코드를 짤 수 있을 것이라 기대한다.</p><hr/><h3>OOP(객체 지향 프로그래밍)란 ?</h3><p><strong>객체 지향 프로그래밍</strong>(<a href="https://ko.wikipedia.org/wiki/%EC%98%81%EC%96%B4">영어</a>: Object-Oriented Programming, OOP)은 컴퓨터 프로그래밍의 패러다임중 하나이다. 객체 지향 프로그래밍은 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 &quot;객체&quot;들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있다.</p><p>객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용된다. 또한 프로그래밍을 더 배우기 쉽게 하고 소프트웨어 개발과 보수를 간편하게 하며, 보다 직관적인 코드 분석을 가능하게 하는 장점을 갖고 있다. 그러나 지나친 프로그램의 객체화 경향은 실제 세계의 모습을 그대로 반영하지 못한다는 비판을 받기도 한다.<a href="https://ko.wikipedia.org/wiki/%EA%B0%9D%EC%B2%B4_%EC%A7%80%ED%96%A5_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">위키피디아</a></p><p><img src="Untitled.png" alt="Untitled.png"/>
-<img src="Untitled1.png" alt="Untitled1.png"/>
-<img src="Untitled2.png" alt="Untitled2.png"/></p><p>cf) C언어 : 절차지향적 프로그래밍 ( 함수단위로 순서대로 진행 )</p><p>지금은 많은 언어에서 객체 지향 프로그래밍을 적용하고 있지만 과거에는 그렇지 않았다.</p><h3>OOP를 한마디로 표현한다면 ?</h3><p>&quot;객체간의 소통&quot;</p><h3>OOP의 특징</h3><ul><li>abstraction (추상화)<ul><li>여러 객체들을 묶어 상위 개념으로 표현 (영희 5000원, 철수 10000원 → 자산)</li><li>클래스는 각각의 객체들의 공통된 부분만을 추상화한 것이다.</li></ul></li><li>Polymorphism (다형성)<ul><li>어떤 한 요소에 여러 개념을 넣어 놓는 것으로 일반적으로 오버라이딩(같은 이름의 메소드가 여러 클래스에서 다른 기능을 하는 것)이나 오버로딩(같은 이름의 메소드가 인자의 개수나 자료형에 따라서 다른 기능을 하는 것)을 의미한다. 다형 개념을 통해서 프로그램 안의 객체 간의 관계를 조직적으로 나타낼 수 있다.<!-- -->[위키피디아]</li><li>인터페이스로 참조, 자식객체, 부모객체</li></ul></li><li>Encapsulation(캡슐화, 은닉화)<ul><li>숨길 부분과 밖으로 드러낼 부분을 조절</li><li>private, public</li></ul></li><li>Inheritance (상속성)<ul><li>상속은 새로운 클래스가 기존의 클래스의 자료와 연산을 이용할 수 있게 하는 기능이다. 상속을 받는 새로운 클래스를 부클래스, 파생 클래스, 하위 클래스, 자식 클래스라고 하며 새로운 클래스가 상속하는 기존의 클래스를 기반 클래스, 상위 클래스, 부모 클래스라고 한다. 상속을 통해서 기존의 클래스를 상속받은 하위 클래스를 이용해 프로그램의 요구에 맞추어 클래스를 수정할 수 있고 클래스 간의 종속 관계를 형성함으로써 객체를 조직화할 수 있다.<!-- -->[위키피디아]</li><li>자식 객체 생성</li><li>extends</li></ul></li></ul><h3>OOP의 단점</h3><ul><li>객체지향은 객체와 클래스를 사용하여 각 모듈의 높은 독립성을 권장한다.그래서 여러 클래스를 상속해서 사용해 중복코드를 최소화하고, 유지보수확장성을 높입니다. -&gt; 실행 속도가 느리다.</li><li>객체가 많으면 메모리 비효율적으로 차지.</li><li>설계에 오랜 시간 걸림.</li><li>설계 실패 시 리스크 큼.</li></ul><hr/><h3>OOP는 디자인 패턴과 무슨 관계가 있는가 ?</h3><p>디자인 패턴은 객체 지향 프로그래밍 설계를 할 때 자주 발생하는 문제들을 피하기 위해 사용되는 패턴<!-- -->[나무위키]<!-- -->이다. 왜 OOP인가 ?  </p><p>사실 디자인 패턴은 어떠한 프로그래밍 방법론에도 적용될 수 있으며 심지어 프로그래밍 방법론을 넘어 다양한 분야에서 사용될 수 있다.</p><p>소프트웨어 분야에서 디자인 패턴이라는 용어가 유명해진 계기는 GOF, <strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong> 라는 책이 출판되면서 부터이다. 책의 제목에서 유추할 수 있듯이 이 책에서 제안하는 디자인 패턴들은 가독성 및 효율성 뿐만 아니라 OOP에서 코드의 재사용성을 높이는 것을 고려하여 패턴화 하였다.</p><p><img src="book.png" alt="book.png"/></p><p>즉, 프로그래밍분야의 디자인 패턴의 틀을 만들었다고 할 수 있는 이 책에서 디자인 패턴은 OOP 프로그래밍 방식과 아주 잘 어울리는 개념이라 할 수 있다.</p><p>위에서 언급한 책에서 패턴을 크게 3가지로 나누는데 다음과 같으며 각 패턴은 모두 &quot;객체&quot;와 연관이 있다.</p><p>생성(creational) 패턴 : 객체의 생성에 대한 방법들</p><p>구조(structural) 패턴 : 객체와 객체 사이의 상속/조합 관계설정 방법들</p><p>행위(behavioral) 패턴 : 객체가 특정 행동을 함으로서 다른 객체에 값을 전달하는 방법들</p>]]></content>
-        <author>
-            <name>Lim SeongKyu</name>
-            <uri>https://github.com/seongkyu-lim</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>welcome</id>
-        <link href="https://seongkyu-lim.github.io/Blog/blog/welcome"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[hihihi]]></summary>
-        <content type="html"><![CDATA[<p>hihihi</p><p><a href="https://docusaurus.io/docs/blog">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p>Regular blog authors can be added to <code>authors.yml</code>.</p><p>The blog post date can be extracted from filenames, such as:</p><ul><li><code>2019-05-30-welcome.md</code></li><li><code>2019-05-30-welcome/index.md</code></li></ul><p>A blog post folder can be convenient to co-locate blog post images:</p><p><img src="./docusaurus-plushie-banner.jpeg" alt="Docusaurus Plushie"/></p><p>The blog supports tags as well!</p><p><strong>And if you don&#x27;t want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://github.com/yangshun</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>mdx-blog-post</id>
-        <link href="https://seongkyu-lim.github.io/Blog/blog/mdx-blog-post"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/">MDX</a>.</p><p>:::tip</p><p>Use the power of React to create interactive blog posts.</p><pre><code class="language-js">&lt;button onClick={() =&gt; alert(&#x27;button clicked!&#x27;)}&gt;Click me!&lt;/button&gt;
-</code></pre><button>Click me!</button><p>:::</p>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[1월 3일의 생각]]></title>
         <id>thingking</id>
@@ -76,30 +17,6 @@
         <author>
             <name>Lim SeongKyu</name>
             <uri>https://github.com/seongkyu-lim</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>long-blog-post</id>
-        <link href="https://seongkyu-lim.github.io/Blog/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p><p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Endilie Yacop Sucipto</name>
-            <uri>https://github.com/endiliey</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>first-blog-post</id>
-        <link href="https://seongkyu-lim.github.io/Blog/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Gao Wei</name>
-            <uri>https://github.com/wgao19</uri>
         </author>
     </entry>
 </feed>
