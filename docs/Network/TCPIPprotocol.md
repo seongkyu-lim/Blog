@@ -1,0 +1,86 @@
+---
+sidebar_position: 1
+title: TCP/IP protocol suite
+---
+
+## Network and Internet
+
+Internet
+
+- Internetwork → combination of networks
+
+network
+
+- the interconnection of a set of devices capable of communication.
+    - devices → host(computer, phone..), connecting device( router, modem. switch )
+- LAN( Local Area Network ) , WAN( Wide Area Network )
+- Internet ~ switched network,, circuit switched network, packet-switched network.
+
+## TCP / IP protocol suite
+
+### Application Layer
+
+- TCP /IP protocol suite의 제 5 계층.
+- 인터넷을 사용하는 유저들에게 서비스를 제공하는 레이어입니다.
+- client-server paradigm
+    - 서비스 요청자인 클라이언트와 서비스 자원의 제공자인 서버 간에 작업을 분리해주는 분산 어플리케이션 구조이자 네트워크 아키텍처를 나타낸다.
+- peer-to-peer paradigm
+    - 오로지 동등한 계층 노드들(**peer** nodes)이 서로 클라이언트와 서버 역할을 동시에 네트워크 위에서 하게 된다.
+- protocols : HTTP, FTP, SMTP, DNS...
+    - HTTP : **인터넷에서 데이터를 주고받을 수 있는 프로토콜. 주로 HTML 문서를 주고받는데에 쓰임.**
+    - FTP : file transfer protocol로 서버와 클라이언트 사이에 파일을 전송하기 위한 프로토콜.
+    - SMTP : 인터넷에서 이메일을 보내기 위해 이용되는 프로토콜이다.
+    - DNS :도메인 네임 시스템은 호스트의 도메인 이름을 호스트의 네트워크 주소로 바꾸거나 그 반대의 변환을 수행할 수 있도록 하기 위해 개발되었다. URL은 domain을 포함한 경로이다.
+
+### Transport Layer
+
+- TCP /IP protocol suite의 제 4 계층. , 심장 (논리적 연결의 마지막 단.)
+- process-to-process connection.
+- error control, flow control, congestion control
+    - error control : **오류 제어** 는 수신자에게 전달 된 데이터가 오류가없고 신뢰할 수 있음을 관찰.
+    - flow control : 송신측과 수신측의 데이터처리 속도 차이를 해결하기 위한 기법.
+    - congestion control : 송신측의 데이터 전달과 네트워크의 처리속도 차이를 해결하기 위한 기법.
+- UDP, TCP protocol
+    - **TCP**
+    - 연결형 서비스로 가상 회선 방식을 제공한다.
+    - 3-way handshaking과정을 통해 연결을 설정하고 4-way handshaking을 통해 해제한다.
+    - 흐름 제어 및 혼잡 제어.
+    - 높은 신뢰성을 보장한다.
+    - UDP보다 속도가 느리다.
+    - 전이중(Full-Duplex), 점대점(Point to Point) 방식.
+    - **UDP**
+    - 비연결형 서비스로 데이터그램 방식을 제공한다.
+    - 정보를 주고 받을 때 정보를 보내거나 받는다는 신호절차를 거치지 않는다.
+    - UDP헤더의 CheckSum 필드를 통해 최소한의 오류만 검출한다.
+    - 신뢰성이 낮다.TCP보다 속도가 빠르다.
+
+### Network Layer
+
+- TCP /IP protocol suite의 제 3 계층.
+- host-to-host connection. ( uniquely defined addresses issue 존재.)
+- packetizing, routing, forwarding, packet switching
+- IPv4,  ICMPv4 protocol
+    - 인터넷 프로토콜은 송신 호스트와 수신 호스트가 패킷 교환 네트워크에서 정보를 주고받는 데 사용하는 정보 위주의 규약이며, OSI 네트워크 계층에서 호스트의 주소지정과 패킷 분할 및 조립 기능을 담당한다. 줄여서 아이피라고도 한다.
+    - ICMP는 인터넷 프로토콜 스위트에 기록된 주요 프로토콜 가운데 하나이다. 네트워크 컴퓨터 위에서 돌아가는 운영체제에서 오류 메시지를 전송받는 데 주로 쓰이며 인터넷 프로토콜의 주요 구성원 중 하나로 인터넷 프로토콜에 의존하여 작업을 수행한다.
+- unicast routing, multicast routing
+- IPv6, ICMPv6
+
+### Data link Layer, Physical Layer
+
+- TCP /IP protocol suite의 제 2,1 계층.
+- 네트워크가 연결되었을 때, 인터넷을 구성하는 영역입니다.
+- 위의 세개 계층에 서비스를 제공하는 역할을 합니다.
+
+**계층별 데이터 단위**
+
+- 층 1(물리 **계층**) PDU – 비트(스트림)
+- 층 2(**데이터** 링크 **계층**) PDU – 전달정보(프레임)
+- 층 3(네트워크 **계층**) PDU – 패킷 혹은 UDP의 **데이터**그램
+- 층 4(전송 **계층**) PDU – TCP 세그먼트
+- 층 5-6-7 (응용 **계층**) PDU – 메시지, **데이터**
+
+네트워크 전송, 수신 모델을 계층을 나누어 모델링하는 이유는(protocol layering의 이유는) ?
+
+1. 서비스들을 실행단과 분리가 가능하게 합니다. → 관리 용이, 사용성 간편화.
+
+2. 효율적으로 네트워킹이 이루어질수 있게 합니다. (router와 같이 특정 기능만이 필요한 경우, layering이 이루어지지 않은 네트워크인 경우 내부적으로 복잡해지고 비용이 증가할 것입니다.)

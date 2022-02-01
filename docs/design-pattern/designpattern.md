@@ -1,8 +1,6 @@
 ---
-slug: design-pattern
+sidebar_position: 1
 title: What is Design Pattern ?
-authors: [seongkyu]
-tags: [design pattern]
 ---
 
 # 디자인 패턴이란 ?
@@ -27,9 +25,9 @@ tags: [design pattern]
 
 객체 지향 프로그래밍은 프로그램을 유연하고 변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용된다. 또한 프로그래밍을 더 배우기 쉽게 하고 소프트웨어 개발과 보수를 간편하게 하며, 보다 직관적인 코드 분석을 가능하게 하는 장점을 갖고 있다. 그러나 지나친 프로그램의 객체화 경향은 실제 세계의 모습을 그대로 반영하지 못한다는 비판을 받기도 한다.[위키피디아](https://ko.wikipedia.org/wiki/객체_지향_프로그래밍)
 
-![Untitled.png](Untitled.png)
-![Untitled1.png](Untitled1.png)
-![Untitled2.png](Untitled2.png)
+![Untitled.png](image/Untitled.png)
+![Untitled1.png](image/Untitled1.png)
+![Untitled2.png](image/Untitled2.png)
 
 cf) C언어 : 절차지향적 프로그래밍 ( 함수단위로 순서대로 진행 )
 
@@ -72,7 +70,7 @@ cf) C언어 : 절차지향적 프로그래밍 ( 함수단위로 순서대로 진
 
 소프트웨어 분야에서 디자인 패턴이라는 용어가 유명해진 계기는 GOF, **Design Patterns: Elements of Reusable Object-Oriented Software** 라는 책이 출판되면서 부터이다. 책의 제목에서 유추할 수 있듯이 이 책에서 제안하는 디자인 패턴들은 가독성 및 효율성 뿐만 아니라 OOP에서 코드의 재사용성을 높이는 것을 고려하여 패턴화 하였다.
 
-![book.png](book.png)
+![book.png](image/book.png)
 
 즉, 프로그래밍분야의 디자인 패턴의 틀을 만들었다고 할 수 있는 이 책에서 디자인 패턴은 OOP 프로그래밍 방식과 아주 잘 어울리는 개념이라 할 수 있다.
 

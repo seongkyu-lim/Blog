@@ -1,12 +1,9 @@
 ---
-slug: creational-pattern
-title: Creational pattern 
-authors: [seongkyu]
-tags: [design pattern, creational pattern]
+sidebar_position: 2
+title: Creational pattern
 ---
-# Creational Pattern
 
-## Creational Pattern
+# Creational Pattern
 
 - 생성 패턴은 인스턴스를 만드는 절차를 **추상화**하는 패턴입니다.
 - 객체를 생성, 합성하는 방법이나 객체의 표현 방법과 시스템(소프트웨어)(user)을 분리해 줍니다.
@@ -57,9 +54,9 @@ EMBERToolKit, EnginolaToolKit 과같은 생성할 객체의 클래스는 캡슐�
 - ConcreteProduct(EmberCPU, EmberMMU, EnginolaCPU, EnginolaMMU): 구체적으로 팩토리가 생성할 객체를 정의하고, AbstractProduct가 정의하는 인터페이스를 구현합니다.
 - Client: AbstractFactory와 AbstractProduct 클래스에 선언된 인터페이스를 사용합니다.
 
-![abstractfactory_code_1.png](abstractfactory_code_1.png)
-![abstractfactory_code_2.png](abstractfactory_code_2.png)
-![abstractfactory_code_3.png](abstractfactory_code_3.png)
+![abstractfactory_code_1.png](image/abstractfactory_code_1.png)
+![abstractfactory_code_2.png](image/abstractfactory_code_2.png)
+![abstractfactory_code_3.png](image/abstractfactory_code_3.png)
 
 출처 : [Design Patterns and Refactoring](https://sourcemaking.com/design_patterns/abstract_factory/java/1)
 
@@ -106,9 +103,9 @@ AbstractFactory 클래스는 **factory method** 패턴을 이용해서 구현되
 
 예제에서는 **getDecodedImage**가 **factory method**가 됩니다. 왜냐하면 객체를 제조하는 방법을 알기 때문입니다.
 
-![factorymethod_code_1.png](factorymethod_code_1.png)
-![factorymethod_code_2.png](factorymethod_code_2.png)
-![factorymethod_code_3.png](factorymethod_code_3.png)
+![factorymethod_code_1.png](image/factorymethod_code_1.png)
+![factorymethod_code_2.png](image/factorymethod_code_2.png)
+![factorymethod_code_3.png](image/factorymethod_code_3.png)
 
 출처 : [Design Patterns and Refactoring](https://sourcemaking.com/design_patterns/factory_method/java/1)
 
@@ -146,7 +143,7 @@ AbstractFactory 클래스는 **factory method** 패턴을 이용해서 구현되
 - Director: Builder 인터페이스를 사용하는 객체를 표현합니다. ( 인스턴스 사용)
 - Product: 생성할 복합 객체를 표현합니다. ( 제품의 속성, 기능등을 가짐.)
 
-![builder_struc.png](builder_struc.png)
+![builder_struc.png](image/builder_struc.png)
 
 Director 객체를 생성하고, 생성한 객체를 자신이 원하는 Builder 객체로 합성해 나갑니다.
 
