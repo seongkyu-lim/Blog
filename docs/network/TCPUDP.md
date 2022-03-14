@@ -1,0 +1,62 @@
+
+# <span style="color:green">TCP, UDP 프로토콜</span>
+
+### TCP란?
+
+- **전송 제어 프로토콜**(Transmission Control Protocol, TCP, 문화어: 전송조종규약)은 인터넷 프로토콜 스위트(IP)의 핵심 프로토콜중 하나로, IP와 함께 TCP/IP라는 명칭으로도 널리 불린다. TCP는 근거리 통신망이나 인트라넷, 인터넷에 연결된 컴퓨터에서 실행되는 프로그램 간에 일련의 옥텟을 안정적으로, 순서대로, 에러없이 교환할 수 있게 한다. TCP는 전송 계층에 위치한다. 네트워크의 정보 전달을 통제하는 프로토콜이자 인터넷을 이루는 핵심 프로토콜의 하나로서 국제 인터넷 표준화 기구(IETF)의 RFC 793에 기술되어 있다.[위키백과]
+### TCP 작동
+
+- TCP프로토콜의 작동은 크게 세 가지 흐름으로 구분합니다.
+    1. 연결 생성 (Connection establishment)
+
+       [3-way handshake 사용.](https://www.notion.so/3-way-handshake-c6b544a3a0784e0f9c1178f5f604bacc)
+
+    2. 자료 전송 (Data transfer)
+    3. 연결 종료 (Connection termination)
+
+       4-way handshake 사용.
+
+
+### Control
+
+- error control : **오류 제어** 는 수신자에게 전달 된 데이터가 오류가없고 신뢰할 수 있음을 관찰.
+- flow control : 송신측과 수신측의 데이터처리 속도 차이를 해결하기 위한 기법.
+- congestion control : 송신측의 데이터 전달과 네트워크의 처리속도 차이를 해결하기 위한 기법.
+
+---
+
+### UDP란?
+
+**사용자 데이터그램 프로토콜**(User Datagram Protocol, UDP)은 인터넷 프로토콜 스위트의 주요 프로토콜 가운데 하나이다. 1980년에 데이빗 리드가 설계하였고, 현재 IETF의 RFC 768로 표준으로 정의되어 있으며, TCP와 함께 데이터그램으로 알려진 단문 메시지를 교환하기 위해서 사용된다. UDP는 유니버설 데이터그램 프로토콜(Universal Datagram Protocol)이라고 일컫기도 한다.[위키백과]**
+### UDP 작동
+
+UDP에 의한 통신은 TCP와 달리 연결을 생성하거나 종료하는 과정이 없습니다. 또한 UDP에 의해 보내어진 데이터그램(UDP에서의 데이터 단위)들은 순서가 존재하지 않으며 서로 독립적입니다.
+
+### Control
+
+TCP와 달리 혼잡 제어와 흐름 제어를 하지 않기 때문에 송신측의 데이터 처리 속도가 너무 빠르거나, 네터워크의 처리속도가 송신측의 처리속도를 따라가지 못하는 상황에서는 오버플로우가 발생할 수 있습니다. UDP헤더의 checksum을 통해 오류 제어는 하지만, TCP에서는 재전송을 요청하는 것과 달리 오류가 있는 데이터그램을 폐기 시켜버립니다.
+
+### TCP와 UDP의 차이점을 비교하며 요약.
+
+- TCP와 UDP의 가장 큰 차이는 세그먼트/데이터그램 전달의 신뢰성에 있습니다. TCP는 신뢰성이 높은 반면 UDP는 신뢰가 바닥입니다.
+- TCP는 신뢰성을 유지하기위해 연결을 우선 하거나, 오류가 있는 데이터는 확인을 하고 복구를 하는 등 해야할 일이 많기에, 처리속도가 느리며, UDP는 신뢰에는 관심이 없지만 대신 처리속도가 빠릅니다.
+
+### 웹개발자로서 TCP와 UDP를 알아야하는 이유 ?
+
+- 특징을 알고 특정 서비스에 어떠한 프로토콜이 더 적합한지 판단할 수 있어야 할 것입니다.
+
+UDP: DNS, VoIP, IPTV, TFTP,,
+
+### QUIC(**Quick UDP Internet Connection)**
+
+구글에서 2012년에 구현하고 적용한 새로운 transport layer 통신 프로토콜입니다. QUIC을 사용하면 <span style="color:orange">과거에 통신을 하였던 서버와는 바로 연결(제로-핸드 셰이크)</span>이 가능하여 TCP보다는 통신속도를 높이고, <span style="color:orange">혼잡 제어와 자동 재전송</span>을 지원하여 UDP보다는 신뢰성을 높입니다.
+
+TCP를 보완하지 않고 UDP를 기반으로하여 새로운 프로토콜을 구축한 이유가 무엇일까 ?
+
+→ TCP지원은 종종 운영체제와 결합되어있는 부분이 있기 때문입니다, OS는 제어영역 밖의 일이어서 UDP를 기반으로 자유롭게 개발하였다고 합니다.
+
+
+- 참고자료
+
+  [https://mindnet.tistory.com/entry/네트워크-쉽게-이해하기-22편-TCP-3-WayHandshake-4-WayHandshake](https://mindnet.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-22%ED%8E%B8-TCP-3-WayHandshake-4-WayHandshake)
+
