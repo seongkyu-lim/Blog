@@ -17,32 +17,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    image: 'img/docusaurus_mountain.svg',
+    title: '건강이 최고!',
+    image: 'img/healthy.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        라이딩, 축구, 헬스를 좋아합니다. :)
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    image: 'img/undraw_docusaurus_tree.svg',
+    title: '성장형 개발자',
+    image: 'img/developer.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+          배움에 가치를 두고 새로운 기술을 사용하는 것에 적극적이며 다양한 분야에 호기심이 많습니다.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    image: 'img/undraw_docusaurus_react.svg',
+    title: 'Spring project',
+    image: 'img/tree.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        봄을 가장 좋아합니다.
       </>
     ),
   },
