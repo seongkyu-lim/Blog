@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Spring project',
+    title: '스프링 프로젝트',
     image: 'img/tree.png',
     description: (
       <>
