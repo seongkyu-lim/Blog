@@ -1,0 +1,57 @@
+---
+sidebar_position: 3
+title: Classes
+---
+
+# <span style={{color: '#4fddbf'}}>Properties</span>
+
+Class의 Property는 필드와 접근자를 통칭하는 말입니다.
+
+필드는 데이터를 저장하는 변수를 의미하며, 접근자는 해당 필드에 접근하여 값을 조회하거나 수정하는 getter, setter를 의미합니다.
+
+코틀린에서 프로퍼티는 var, val키워드를 사용하여 mutable한지, read-only인지를 정해줄 수 있습니다.
+
+val 키워드를 사용하면 해당 프로퍼티는 read-only이며, 따라서 setter를 사용할 수 없습니다.
+
+```kotlin
+class Address {
+    var name: String = "Holmes, Sherlock"
+    var street: String = "Baker"
+    var city: String = "London"
+    var state: String? = null
+    var zip: String = "123456"
+}
+```
+
+프로퍼티에 접근하거나 사용하려면 간단하게 이름으로 ‘.’과 함께 접근하여 사용할 수 있습니다.
+
+```kotlin
+fun copyAddress(address: Address): Address {
+    val result = Address() // there's no 'new' keyword in Kotlin
+    result.name = address.name // accessors are called
+    result.street = address.street
+    // ...
+    return result
+}
+```
+
+### Getters and Setters
+
+앞서 설명하였듯이 val 키워드로 선언을한 프로퍼티는 setter를 사용할 수 없습니다.
+
+getter와 setter를 커스텀하여 사용이 가능하며 방법은 아래와 같습니다.
+
+```kotlin
+class Rectangle(val width: Int, val height: Int) {
+    val area: Int // property type is optional since it can be inferred from the getter's return type
+        get() = this.width * this.height
+
+		var stringRepresentation: String
+		    get() = this.toString()
+		    set(value) {
+		        setDataFromString(value) // parses the string and assigns values to other properties
+		    }
+}
+```
+
+### **Late-initialized properties and variables**
