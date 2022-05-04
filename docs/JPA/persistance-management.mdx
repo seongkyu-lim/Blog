@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+title: JPA Start
+---
+
+# <span style={{color: '#4fddbf'}}>Persistence Management</span>
+
+JPA는 크게 엔티티와 테이블을 매핑하는 설계 부분과 매핑한 엔티티를 실제 사용하는 부분으로 나눌 수 있습니다.
+
+## 영속성 컨텍스트 ( persistence context )
+
+엔티티를 영구히 저장하는 환경으로, entity manager는 엔티티들을 영속성 컨텍스트에 저장하여 관리합니다.
+
+즉 JPA 시작 단계에서 로직으로 짰던 member를 저장할 때 사용한 persist()메소드는 사실 단순히 멤버 엔티티를 테이블에 저장하는 것이아니라 좀 더 정확한 표현으로는 영속성 컨텍스트에 저장하는 메소드입니다.
+
+영속성 컨텍스트는 보통 엔티티 매니저가 생성할 때 하나씩 만들어집니다. 물론 여러 엔티티가 같은 영속성 컨텍스트에 접근하는 경우도 존재합니다.
+
+## 엔티티 생명주기 ( Entity Lifecycle )
+
+- 비영속(new/transient) : 영속성 컨텍스트와 전혀 관계가 없는 상태
+- 영속(managed) : 영속성 컨텍스트에 저장된 상태
+- 준영속(detached) : 영속성 컨텍스트에 저장되었다가 분리된 상태
+- 삭제(removed) : 삭제된 상태
+
+## 영속성 컨텍스트의 특징
+
+## Flush
+
+DB와 동기화하는 과정.
+
+Trasaction commit 시 발생.
+
+## 준영속
