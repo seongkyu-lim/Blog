@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkseongkyu_lim=self.webpackChunkseongkyu_lim||[]).push([[6526],{8141:function(e){e.exports=JSON.parse('{"allTagsPath":"/Blog/blog/tags","slug":"/Blog/blog/tags/knowledge","name":"knowledge","count":5,"permalink":"/Blog/blog/tags/knowledge"}')}}]);
