@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseongkyu_lim=self.webpackChunkseongkyu_lim||[]).push([[715],{8501:function(g){g.exports=JSON.parse('{"/Blog/blog/tags/thingking":{"allTagsPath":"/Blog/blog/tags","slug":"/Blog/blog/tags/thingking","name":"thingking","count":2,"permalink":"/Blog/blog/tags/thingking"}}')}}]);

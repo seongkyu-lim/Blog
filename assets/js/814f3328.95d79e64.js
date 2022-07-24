@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseongkyu_lim=self.webpackChunkseongkyu_lim||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"7\uc6d4 18\uc77c\uc758 \uc0dd\uac01","permalink":"/Blog/blog/thingking"},{"title":"1\uc6d4 3\uc77c\uc758 \uc0dd\uac01","permalink":"/Blog/blog/thingking"}]}')}}]);
