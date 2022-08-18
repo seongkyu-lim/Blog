@@ -1,0 +1,142 @@
+---
+sidebar_position: 2
+title: MongoDB
+---
+
+# <span style={{color: '#4fddbf'}}>FstAPI - mongoDB</span>
+
+# MongoDB 란 ?
+
+mongoDB는 NoSQL 데이터베이스 중 하나입니다. 기존의 테이블 기반의 관계형 데이터베이스 구조가 아닌 문서 지향의 데이터 모델(BSON - binary로 인코딩 된 JSON)을 사용하는 교차 플랫폼 오픈 소스 데이터베이스입니다.
+
+- JSON으로 데이터를 주고 받는 현재 웹, 앱 서버의 데이터 처리에 잘 어울리는 데이터베이스라고 생각합니다.
+- 테이블과 같은 스키마가 필수적이지 않기 때문에 쉽게 관리하고 유연하게 데이터를 저장할 수 있습니다.
+- 또 쿼리를 더 쉽게 작성할 수 있다고합니다.
+- 특히 DB구조를 수정하고 확장할 때 큰 장점이 있을 거라 생각됩니다. (고려해야할 점이 상대적으로 적기 때문에 )
+- 스키마가 필수적이지 않다는것은 스키마가 없다는 것과는 다른 의미입니다. 관계형 데이터베이스처럼 스키마를 적용하여 사용할 수도 있습니다. (유연한 사용)
+
+### MongoDB의 구조
+
+DataBase > Collection > Document의 구조를 가지며 관계형 데이터베이스와 굳이 비교하자면 Collection은 Table, Document는 테이블의 Row와 비교될 수 있습니다.
+
+ps. MongoDB의 데이터 모델은 BSON타입이기에 데이터의 타입을 Json과 호환되는 타입으로 반환해주어야합니다. (ex : dict, list 등)
+
+예로, mongodb에 데이터를 저장할 때는 해당 FastAPI의 jsonable_encoder 메소드를 적용하여 json과 호환되는 타입으로 만들어줄 수 있습니다. jsonable_encoder는 pydantic 모델을 상송받은 객체는 dict, datetime 객체는 str로 변환해줍니다.
+
+# MongoDB 설치하기.
+
+우선 서버 어플리케이션과 연동할 DB가 있어야 합니다. 연동할 개인 DB를 세팅하는 방법은 다음과 같습니다.
+
+- mongoDB atlas
+- docker image
+- local installing
+
+첫번 째 방법은 mongoDB의 atlas서비스를 이용하는 것입니다. atlas는 mongodb에서 지원하는 db 클라우드 서비스입니다. 즉 로컬에 별도의 설치없이 이용이 가능합니다.
+
+두번 째 방법은 docker를 이용해 mongodb image를 받아 container를 띄워 db를 구축하는 것입니다.
+
+마지막 방법은 로컬에 직접  mongoDB를 설치하는 방법입니다.
+
+저는 docker를 이용해 DB 컨테이너를 띄워 구축하도록 하겠습니다.
+
+FastAPI 어플리케이션과 함께 관리되도록 해당 프로젝트에서 Docker-compose.yml에 설정 후 만들어 주겠습니다.
+
+```yaml
+//docker-compose.yml
+
+version: '3'
+
+networks:
+  app-tier:
+    driver: bridge
+
+volumes:
+  data-volume:
+
+services:
+  app:
+    image:
+    build:
+      context: .
+      dockerfile: ./DockerFile
+    ports:
+      - "80:8000"
+    restart: always
+    container_name:
+    links:
+      - mongodb
+    networks:
+      - app-tier
+
+  mongodb:
+    image: mongo
+    ports:
+      - 26017:27017
+    restart: always
+    container_name: dano-lunch-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME:
+      MONGO_INITDB_ROOT_PASSWORD:
+    volumes:
+      - data-volume:/var/lib/mongodb
+    networks:
+      - app-tier
+```
+
+```bash
+docker-comopse up -d
+```
+
+db 컨테이너가 정상적으로 띄워졌다면 docker의 bash로 db에 접근해봅시다.
+
+```bash
+docker exec -it mongodb /bin/bash
+
+mongo # bash에서 mongodb 실행
+
+use <db_name>; (show dbs;) # db 생성 or 사용.
+
+db.createCollection(’restaurants’); # collection 생성.
+```
+
+혹은 mongoDB compass라는 GUI 툴로 db에 접근할 수도 있습니다.
+
+db url 형식 : **mongodb://<mongodb_id>:<mongodb_password>@localhost:<외부포트번호>/**
+
+ex) mongodb://seongkyu:1234@127.0.0.1:26017/
+
+![스크린샷 2022-06-15 오후 5.13.51.png](FstAPI%20-%20mongoDB%209abcdba597b5451d91d22cc734b26b4c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-06-15_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.13.51.png)
+
+# FastAPI에서 MongoDB connecting.
+
+mongoDB에서 만든 python Driver는 PyMongo와 Motor가 있습니다. Motor는 PyMongo에  wrapping 되어 비동기 드라이버로써의 기능을 지원합니다. (PyMongo는 지원하지 않습니다.)
+
+FastAPI는 비동기 처리를 하기 때문에 PyMongo와 Motor중 Motor를 사용하여야 합니다.
+
+Motor를 사용해 어플리케이션에서 DB client를 만들어 설치한 DB와 연동해 줍시다.
+
+```python
+
+import motor.motor_asyncio
+
+client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["MONGODB_URL"])
+db = client.{db_name}
+```
+
+MONGODB_URL에는 docker-compose로 DB를 만들었기 때문에 컨테이너명과 내부포트번호를 사용하여 URL을 설정합니다.
+
+ex) mongodb://seongkyu:1234@mongodb:27017/
+
+이제 서버 어플리케이션과 DB의 연결이 이루어졌습니다.
+
+아래와 같은 코드를 실행하고 mongodb compass나 docker bash를 통해 db에 데이터가 변동되었는지 확인해 볼 수 있습니다! ( 좀 더 자세한 예제는 아래의 CRUD 구현해보기 링크 참고. )
+
+```python
+
+async def test_db_connecting():
+	await db["<collection_name>"].insert_one(anything)
+	await db["<collection_name>"].find_one({"_id": 123123)
+	await db["<collection_name>"].update_one({"_id": id})
+```
+
+[FastAPI + mongoDB로 CRUD 구현해보기!](https://www.mongodb.com/developer/languages/python/python-quickstart-fastapi/)
