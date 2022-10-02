@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkseongkyu_lim=self.webpackChunkseongkyu_lim||[]).push([[715],{8501:function(n){n.exports=JSON.parse('[{"label":"enlightenment","permalink":"/Blog/blog/tags/enlightenment","count":2},{"label":"thingking","permalink":"/Blog/blog/tags/thingking","count":2}]')}}]);
