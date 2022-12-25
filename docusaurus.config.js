@@ -31,6 +31,9 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
               'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
