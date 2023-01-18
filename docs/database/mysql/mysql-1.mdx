@@ -1,0 +1,51 @@
+---
+sidebar_position: 1
+title: Introduce
+---
+
+# <span style={{color: '#4fddbf'}}>MySQL 소개, 설치, 업그레이드, 설정</span>
+
+## 소개
+
+MySQL은 [오픈소스 DB](https://github.com/mysql)이다.
+
+비용적으로 저렴하며(Oracle RDBMS보다 저렴) 커뮤니티가 활성화되어있기에 학습하기 좋다.
+
+MySQL 서버의 버전은 및 에디션에는 ‘엔터프라이즈’ 와 ‘커뮤니티’ 가 있다.
+
+기본적으로 엔터프라이즈와 커뮤니티의 핵심 기능에 있어서의 차이는 없으며 부가적인 기능과 서비스들을 엔터프라이즈에서 제공한다.
+
+## 설치
+
+책에서는 dmg 파일로 로컬에 설치하는 방법 설명 및 설치과정에서 여러 옵션들 설명
+
+- Docker로 세팅
+    - docker pull mysql (hub로 부터 mysql 최신 버전 이미지 pulling)
+    - docker images (잘 설치되었는지 확인)
+    - docker run —name mysql -e MYSQL_ROOT_PASSWORD=<password> -d -p 3306:3306 mysql:latest ( 도커 컨테이너 생성 및 실행)
+    - docker stop mysql ( 컨테이너 중지 )
+    - docker start mysql  ( 컨테이너 시작 )
+    - docker exec -it mysql bash ( 컨테이너 접속 )
+    - mysql -u root -p ( 배쉬창에서 root정으로 mysql 서버 접근 )
+
+## 업그레이드
+
+MySQL 서버를 업그레이드하는 방법으로 두 가지 정도의 방법을 고려할 수 있다.
+
+1. MySQL서버의 데이터 파일을 그대로 두고 업그레이드하는 방법 (In-Place Upgrade)
+2. mysqldump 도구등을 이용해 데이터를 SQL문장이나 텍스트 파일로 덤프하고, 새로 업그레이드된 MySQL서버에서 덤프된 데이터를 적재하는 방법 (Logical Upgrade)
+
+인플레이스 업그레이드는 여러가지 제약사항이 존재하지만 업그레이드 시간을 크게 단축할 수 있으며 로지컬 업그레이드는 제약사항이 거의 없지만 업그레이드 시간이 오래걸린다.
+
+## 설정
+
+- 일반적으로 단 하나의 설정 파일을 사용 (my.cnf)
+- 설정파일의 위치는 상관없으며 최초 서버 실행 시 가장 먼저 접근되는 설정 파일을 사용
+- 여러 개의 설정 그룹을 담을 수 있으며, [mysqldump], [mysqld], [mysql], [mysqld_safe]등으로 그룹을 구분할 수 있다.
+- **시스템 변수 설정**
+    - SHOW VARIABLES; or SHOW GLOBAL VARIABLES; 로 설정된 시스템변수 확인 가능
+    - 시스템 변수는 대략 570개 수준이며 MYSQL 서버를제대로 사용하려면 시스템 변수에 대한 이해가 상당히 필요
+    - 시스템 변수는 5가지 속성을 가지며 그 중 적용되는 범위를 기준으로 글로벌 변수와 세션 변수로 구분할 수 있다.
+        - 글로벌 변수는 서버 전체를 대상 / 세션 변수는 MYSQL서버와 클라이언트간의 컨넥션을 대상
+    - 5가지 속성 중 하나로 DYNAMIC을기준으로 정적 변수와 동적 변수로 구분할 수 있다.
+        - 동적 변수는 서버가 가동중인 상태에서 변경 가능 / 정적 변수는 변경 불가
