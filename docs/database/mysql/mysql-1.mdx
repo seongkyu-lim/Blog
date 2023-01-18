@@ -22,7 +22,7 @@ MySQL 서버의 버전은 및 에디션에는 ‘엔터프라이즈’ 와 ‘�
 - Docker로 세팅
     - docker pull mysql (hub로 부터 mysql 최신 버전 이미지 pulling)
     - docker images (잘 설치되었는지 확인)
-    - docker run —name mysql -e MYSQL_ROOT_PASSWORD=<password> -d -p 3306:3306 mysql:latest ( 도커 컨테이너 생성 및 실행)
+    - docker run —name mysql -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql:latest ( 도커 컨테이너 생성 및 실행)
     - docker stop mysql ( 컨테이너 중지 )
     - docker start mysql  ( 컨테이너 시작 )
     - docker exec -it mysql bash ( 컨테이너 접속 )
