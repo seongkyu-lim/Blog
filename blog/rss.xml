@@ -4,10 +4,22 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Sun, 16 Apr 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Apr 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2023.04.19의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2023/04/19/</link>
+            <guid>/2023/04/19/</guid>
+            <pubDate>Wed, 19 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[쿼리문법과 orm 라이브러리로 해당 문법을 구현하는 방법 공부하자..!!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="쿼리문법과-orm-라이브러리로-해당-문법을-구현하는-방법-공부하자">쿼리문법과 orm 라이브러리로 해당 문법을 구현하는 방법 공부하자..!!<a class="hash-link" href="#쿼리문법과-orm-라이브러리로-해당-문법을-구현하는-방법-공부하자" title="Direct link to heading">​</a></h2><p>현재 골프 선수, 일정, 결ㄹ과 데이터를 보관하고, 데이터 리스트를 커스터마이징하여 반환해주는 서버를 개발하고있다. (사내 NFT 프로젝트의 일환으로)</p><p>경기 결과, 선수의 랭킹 리스트등을 반환해 줄 때 데이터들의 정렬 기준이 있는데, (크게 랭킹 리스트 정렬 기준, 경기 결과 리스트의 정렬 기준)
+데이터를 저장할 때는 정렬을 하고 저장하지 않으며, 조회할 때 order by, where, join을 적절히 활용하여 정렬된 기준으로 리스트를 조회해야한다.</p><p>해당 작업을 진행하면서 우선 쿼리문으로 작성을 해서 실행하여 데이터가 의도대로 반환되는지 체크하고 해당 쿼리문을 서버에 구현하는 방식으로 진행하였다.
+진행을 하면서 쿼리문법과 orm 구현체 코드의 문법에 대해 평소에 잘 모르다보니 이런 정렬이 가능한지도 가늠이 안되고, 구현하는데까지 너무 많은 시간이 걸렸다.
+(subquery, leftjoin으로 다른 테이블을 조인하고 다른 테이블의 컬럼을 order by의 정렬값으로 사용하는 것, transaction 범위를 커스터마이징 하는 것 등)</p><p>결국 구현을 했지만 구현한 쿼리문보다 더 효율적인 쿼리를 작성할 수 있으려면 쿼리문법과 orm 라이브러리를 좀 더 깊이 있게 학습할 필요가 있다고 생각했던 하루다.</p>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2023.04.16의 깨달음]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2023/04/16/</link>
@@ -15,6 +27,15 @@
             <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[오랜만에 김영한님의 자바 orm 표준 JPA프로그래밍 책을 꺼내서 코드를 따라치고, 서버를 실행했는데 오랜만에 봐서 반가운( 현재 회사에서 nest를 사용 중 )로고를 보여줬는데, 문제는 다음 로그를 보여주지 않았다.]]></description>
             <content:encoded><![CDATA[<p>오랜만에 김영한님의 자바 orm 표준 JPA프로그래밍 책을 꺼내서 코드를 따라치고, 서버를 실행했는데 오랜만에 봐서 반가운( 현재 회사에서 nest를 사용 중 )로고를 보여줬는데, 문제는 다음 로그를 보여주지 않았다.</p><p><img loading="lazy" alt="2023-04-16.png" src="/Blog/assets/images/2023-04-16-adc30111ec1c213038d101c818740afe.png" width="922" height="388" class="img_ev3q"></p><p>얼른 실행시켜서 확인하고 책을 다음장으로 넘어가고 싶은데 서버가 실행이 안된다.</p><p>알고보니 라이브러리의 버전 문제였다. 스프링 부트는 라이브러리의 의존성 버전을 자동으로 맞춰주는데 이 때 충돌이 발생한 것이다.</p><p>각 라이브러리의 버전 명시를 제외함으로써 해결.</p>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
+        <item>
+            <title><![CDATA[2023.04.06의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2023/04/06/</link>
+            <guid>/2023/04/06/</guid>
+            <pubDate>Thu, 06 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[monorepo로 관리하면 어떤 장점이 있을까 ?]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="monorepo로-관리하면-어떤-장점이-있을까-">monorepo로 관리하면 어떤 장점이 있을까 ?<a class="hash-link" href="#monorepo로-관리하면-어떤-장점이-있을까-" title="Direct link to heading">​</a></h2><p>우리 팀은 모노 레포로 프로젝트들을 관리하고 있다.</p><p>이전 회사에서는 서비스마다 레포지토리를 분리하여 관리하고 있었기 때문에 처음 입사하고 모노레포를 clone 받아 코드 구조를 파악할 때 낯설었던 기억이 있었다.</p><p>나는 당연히 프로젝트 단위로 레포지토리를 관리하는 것이 CVS의 의도대로 코드를 관리하는 것이며 적합한 방법이라고 생각했는데, 이번에 monorepo로 작업하면서 직접 느끼고, 찾아보면서 다른 시각을 가지게 되었다.</p><p>monorepo(여러 프로젝트를 하나의 레포지토리로 관리)의 장점으로 제가 직접 느낀 부분은 모듈화가 간편하다는 점이었다, 여러 프로젝트에 사용할 만한 컴포넌트들을 모듈화해서 손쉽게 공유할 수 있는 것이 장점이라고 느껴졌다. (서로 다른 레포로 관리하더라도 라이브러리화해서 어떻게 공유할 수 있겠지만 고려해야될 부분과 불편한 부분이 많을 것이다. )그리고 여러 라이브러리들의 버전관리가 용이하다는 것도 큰 장점이라 여겨졌다.(특히 버전이 자주 바뀌고, 하위호환이 잘 안되는? Javascript 진영에서는 더욱이 큰 장점이라 생각들었다.)</p><p>그리고 한 팀에서 여러 서비스를 개발하고 관리하는 우리 팀의 특성상 monorepo를 사용하는 것이 작업의 효율성을 증대시키는데도 도움이 될 것이라 생각한다. (반대로 이전회사에서는 서비스 별로 팀이 나눠져 있었고, 각 팀 단위로 개발 규칙들이 있을 것이기 때문에 레포를 분리해서 관리하는 것이 편할 것이다.)</p><p>구글도 크롬과 안드로이드를 제외한 나머지 코드를 하나의 모노레포로 관리한다고 한다! 레포지토리 용량이 86TB이고, 해당 레포에 하루 커밋수가 40,000정도 된다고 한다. ㅋㅋ</p><p><a href="https://qeunit.com/blog/how-google-does-monorepo/" target="_blank" rel="noopener noreferrer">https://qeunit.com/blog/how-google-does-monorepo/</a></p><p><a href="https://dl.acm.org/doi/pdf/10.1145/2854146" target="_blank" rel="noopener noreferrer">https://dl.acm.org/doi/pdf/10.1145/2854146</a></p>]]></content:encoded>
             <category>enlightenment</category>
         </item>
         <item>
