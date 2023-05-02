@@ -1,0 +1,20 @@
+---
+<!-- slug: enlightenment -->
+title: 2023.05.02의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+## pq_dump로 postgresql db 마이그레이션 하기.
+
+상황 - 급하게 이슈를 해결하느라 prod db에만 데이터 변동이 생긴 상황, 추후 추가적인 이슈가 발생하지 않도록 코드 검토가 필요하며 dev 환경에서 검토를 위해 dev db와 prod db의 sync를 맞춰주어햐 한다.
+
+해결 방안 - prod db를 dev db로 마이그레이션하자. 마이그레이션 방법은 dump 파일을 사용해 dev db에 덮어 씌운다. ( prod와 dev db의 데이터 구조와 데이터들이 꽤나 달라서 dump를 선택)
+
+환경 - azure posgresql db
+
+방법 - [https://learn.microsoft.com/ko-kr/azure/postgresql/migrate/how-to-migrate-using-export-and-import](https://learn.microsoft.com/ko-kr/azure/postgresql/migrate/how-to-migrate-using-export-and-import)
+
+db migration - 현재 db 운영 환경에서 어떤이유로 인해 다른 운영환경으로 옮기는 것을 의미.
+
+db dump - db의 모든 구조 및 데이터등을 포함하여 SQL문의 목록 형식으로 보관하는 것. 데이터베이스 손실 시 내용을 복원할 수 있도록 백업하는 용도로 가장 많이 활용됨.
