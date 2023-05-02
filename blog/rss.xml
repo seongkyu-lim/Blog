@@ -4,10 +4,19 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Sun, 30 Apr 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 May 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2023.05.02의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/02/</link>
+            <guid>/2023/05/02/</guid>
+            <pubDate>Tue, 02 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[pq_dump로 postgresql db 마이그레이션 하기.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pq_dump로-postgresql-db-마이그레이션-하기">pq_dump로 postgresql db 마이그레이션 하기.<a class="hash-link" href="#pq_dump로-postgresql-db-마이그레이션-하기" title="Direct link to heading">​</a></h2><p>상황 - 급하게 이슈를 해결하느라 prod db에만 데이터 변동이 생긴 상황, 추후 추가적인 이슈가 발생하지 않도록 코드 검토가 필요하며 dev 환경에서 검토를 위해 dev db와 prod db의 sync를 맞춰주어햐 한다.</p><p>해결 방안 - prod db를 dev db로 마이그레이션하자. 마이그레이션 방법은 dump 파일을 사용해 dev db에 덮어 씌운다. ( prod와 dev db의 데이터 구조와 데이터들이 꽤나 달라서 dump를 선택)</p><p>환경 - azure posgresql db</p><p>방법 - <a href="https://learn.microsoft.com/ko-kr/azure/postgresql/migrate/how-to-migrate-using-export-and-import" target="_blank" rel="noopener noreferrer">https://learn.microsoft.com/ko-kr/azure/postgresql/migrate/how-to-migrate-using-export-and-import</a></p><p>db migration - 현재 db 운영 환경에서 어떤이유로 인해 다른 운영환경으로 옮기는 것을 의미.</p><p>db dump - db의 모든 구조 및 데이터등을 포함하여 SQL문의 목록 형식으로 보관하는 것. 데이터베이스 손실 시 내용을 복원할 수 있도록 백업하는 용도로 가장 많이 활용됨.</p>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2023.04.30의 깨달음]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2023/04/30/</link>
