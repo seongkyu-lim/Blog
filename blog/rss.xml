@@ -4,26 +4,17 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Wed, 03 May 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 04 May 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[2023.05.03의 깨달음]]></title>
-            <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/03/</link>
-            <guid>/2023/05/03/</guid>
-            <pubDate>Wed, 03 May 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[좋은 날이 있으면 안 좋은 날도 있고, 안 좋은 날이 있으면 좋은 날도 있더라,]]></description>
-            <content:encoded><![CDATA[<p>좋은 날이 있으면 안 좋은 날도 있고, 안 좋은 날이 있으면 좋은 날도 있더라,</p><p> 좋았던 날에는 그 느낌을 즐기되 겸손하자.</p><p> 안좋았던 날에는 좋은 날이 올 차례라는 것에 설레여하자.</p><p> 상대성 이론이 궁금해진 하루 ~</p>]]></content:encoded>
-            <category>enlightenment</category>
-        </item>
-        <item>
-            <title><![CDATA[2023.05.02의 깨달음]]></title>
-            <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/02/</link>
-            <guid>/2023/05/02/</guid>
-            <pubDate>Tue, 02 May 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[pq_dump로 postgresql db 마이그레이션 하기.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pq_dump로-postgresql-db-마이그레이션-하기">pq_dump로 postgresql db 마이그레이션 하기.<a class="hash-link" href="#pq_dump로-postgresql-db-마이그레이션-하기" title="Direct link to heading">​</a></h2><p>상황 - 급하게 이슈를 해결하느라 prod db에만 데이터 변동이 생긴 상황, 추후 추가적인 이슈가 발생하지 않도록 코드 검토가 필요하며 dev 환경에서 검토를 위해 dev db와 prod db의 sync를 맞춰주어햐 한다.</p><p>해결 방안 - prod db를 dev db로 마이그레이션하자. 마이그레이션 방법은 dump 파일을 사용해 dev db에 덮어 씌운다. ( prod와 dev db의 데이터 구조와 데이터들이 꽤나 달라서 dump를 선택)</p><p>환경 - azure posgresql db</p><p>방법 - <a href="https://learn.microsoft.com/ko-kr/azure/postgresql/migrate/how-to-migrate-using-export-and-import" target="_blank" rel="noopener noreferrer">https://learn.microsoft.com/ko-kr/azure/postgresql/migrate/how-to-migrate-using-export-and-import</a></p><p>db migration - 현재 db 운영 환경에서 어떤이유로 인해 다른 운영환경으로 옮기는 것을 의미.</p><p>db dump - db의 모든 구조 및 데이터등을 포함하여 SQL문의 목록 형식으로 보관하는 것. 데이터베이스 손실 시 내용을 복원할 수 있도록 백업하는 용도로 가장 많이 활용됨.</p>]]></content:encoded>
+            <title><![CDATA[2023.05.04의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/04/</link>
+            <guid>/2023/05/04/</guid>
+            <pubDate>Thu, 04 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[우리 팀은 NestJS로 서버개발을 하고 있는데, 초반에 nest를 학습하면서 Spring과 아주 비슷해서 어느 순간부터 nest 학습을 안하다가, 몰랐던 개념을 알게되어 기록한다.]]></description>
+            <content:encoded><![CDATA[<p>우리 팀은 NestJS로 서버개발을 하고 있는데, 초반에 nest를 학습하면서 Spring과 아주 비슷해서 어느 순간부터 nest 학습을 안하다가, 몰랐던 개념을 알게되어 기록한다.</p><p>이름하여 Pipe.</p><ul><li><p>파이프는 보통 2가지의 목적을 위해 사용된다.</p><ol><li>validation(유효성 검사) - 클라이언트가 전달한 데이터가 유효한지 검사 및 예외 처리.</li><li>transformation(변환) - 클라이언트가 전달한 데이터를 원하는 타입으로 변환.</li></ol></li><li><p>해당 처리 시점은 라우터 핸들러로 전달되기 전.</p></li><li><p>class-validator와 class-transformer 라이브러리와 함께 사용하면 더욱 편리하게 유효성 검사와 변환이 가능합니다.</p></li><li><p>프로젝트에서 사용되는 부분</p></li></ul><p><img loading="lazy" alt="2023-05-04-1.png" src="/Blog/assets/images/2023-05-04-1-987859ebd779678cb5c009dc0f4e3bd8.png" width="1343" height="96" class="img_ev3q"></p><ol><li>@Body, @Query, @Param등의 어노테이션에 인자값으로 Pipe를 넣어주면 handler 단위로 파이프를 설정할 수 있습니다.</li></ol><p><img loading="lazy" alt="2023-05-04-2.png" src="/Blog/assets/images/2023-05-04-2-afcbda5d14ba8c243ed0abbf52233603.png" width="658" height="840" class="img_ev3q"></p><ol start="2"><li>CreateDaoDto를 살펴보면 @IsString() 등의 class-validator 데코레이터로 파이프가 유효성 검사의 목적으로 사용되는 것을 확인할 수 있습니다.</li></ol><p><img loading="lazy" alt="2023-05-04-3.png" src="/Blog/assets/images/2023-05-04-3-d788c8737819cfec4280d460ab2dd97f.png" width="1300" height="70" class="img_ev3q"></p><ol start="3"><li>프로젝트 단위로 main.ts 파일을 보면 useGlobalPipes메소드로 특정 Pipe를 전역적으로 설정할 수도 있습니다. transfrom: true를 옵션으로하여 생성해주어야 class-transformer 라이브러리 적용이 가능합니다.</li></ol><p><img loading="lazy" alt="2023-05-04-4.png" src="/Blog/assets/images/2023-05-04-4-7427371fb2efe8cdc30b84f880185b3b.png" width="1190" height="90" class="img_ev3q"></p><p><img loading="lazy" alt="2023-05-04-5.png" src="/Blog/assets/images/2023-05-04-5-566ce4dd4c256ae255f9ce382e78f641.png" width="524" height="324" class="img_ev3q"></p><ol start="4"><li>쿼리 파라미터의 타입으로 활용되는 DaoParams를 살펴보면 class-transformer의 @Type 데코레이터로 전달받은 값을 Number 타입으로 변환하여 변환의 목적으로 사용되는 것을 확인할 수 있습니다.</li></ol>]]></content:encoded>
             <category>enlightenment</category>
         </item>
         <item>
