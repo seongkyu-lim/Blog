@@ -33,11 +33,11 @@ title: Architecture
 - MySQL의 독특한 구조 중 대표적인 것( 플러그인 모델)
 - 플러그인 형식으로 부가적인 기능을 더 제공하는 스토리지 엔진을 개발하여 적용할 수 있다.
 
-    >> 파서, 인증 기능도 플러그인으로 커스터마이징 가능.
+    - 파서, 인증 기능도 플러그인으로 커스터마이징 가능.
 
-    >> 인증은 mysql 서버 접근 권한을 가지는 계정에 대한 인증을 의미. mysql8은 기본적으로 caching_sha2_password plugin을 사용. (이전에는 mysql_native_password plugin 사용)
+    - 인증은 mysql 서버 접근 권한을 가지는 계정에 대한 인증을 의미. mysql8은 기본적으로 caching_sha2_password plugin을 사용. (이전에는 mysql_native_password plugin 사용)
 
-    >> 기존에는 hash 기법 사용. mysql8에는 salt 추가.
+    - 기존에는 hash 기법 사용. mysql8에는 salt 추가.
 
 
 ### 컴포넌트
