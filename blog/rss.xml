@@ -4,10 +4,20 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Thu, 04 May 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 May 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2023.05.30의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/30/</link>
+            <guid>/2023/05/30/</guid>
+            <pubDate>Tue, 30 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[- k8s의 network 구성에 대해 파악해보았다.]]></description>
+            <content:encoded><![CDATA[<ul><li>k8s의 network 구성에 대해 파악해보았다.</li><li>service로 클러스터 내부 네트워크 설정을 할 수 있다.</li><li>우리팀 서비스는 ingress로 외부와 클러스터간의 네트워크 설정이 되어있다.</li></ul><hr><ul><li>이미 저장되어있는지 체크하고 저장되어있지 않으면 저장하는 로직에 대해 동시에 두개의 서버에서 로직이 수행되면 체크를 하더라도 중복 저장될 수 있다. 이것을 예방하기위해 존재하는지를 체크할 때 where문에 들어가는 컬럼을 unique index로 설정하면 된다고 한다.
+unique index가 무엇인지 이번주에 인덱스 부분 스터디 준비하면서 공부해보자.</li></ul>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2023.05.04의 깨달음]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/04/</link>
