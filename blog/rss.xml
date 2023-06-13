@@ -4,10 +4,19 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Tue, 30 May 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 13 Jun 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2023.06.13의 궁금증]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2023/06/13/</link>
+            <guid>/2023/06/13/</guid>
+            <pubDate>Tue, 13 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[오브젝트 책을 읽다가 객체지향설계는 책임을 중심으로 객체들을 분할할 수 있고, 상태(데이터)를 중심으로 객체들을 분할 할 수 있다고 한다. 그리고 변경을 이유로 책임을 중심으로 하는 것이 바람직하다고 말한다.]]></description>
+            <content:encoded><![CDATA[<p>오브젝트 책을 읽다가 객체지향설계는 책임을 중심으로 객체들을 분할할 수 있고, 상태(데이터)를 중심으로 객체들을 분할 할 수 있다고 한다. 그리고 변경을 이유로 책임을 중심으로 하는 것이 바람직하다고 말한다.</p><p>데이터 중심으로 객체들을 분할하고 영화 예매 시스템을 구현해봄으로써 그 이유를 파악하는데 데이터 중심설계는 캡슐화가 완전히 되지않고, 높은 결합도와 낮은 응집도를 가짐으로써 변경이 발생했을 때 여러군데에 수정이 필요하였다.</p><p>그런데 읽다보니 서버 프레임워크에서 정한 구조에 따라 entity를 생성하고 service 레이어에서 관련 도메인에 대한 로직을 구현하는 것이 전형적인 데이터 중심의 설계인 것이라고 생각되었다.</p><p>DDD를 사용하면 서버 프레임워크로 코드를 작성할 때도 객체지향적으로 짤 수 있는 것일까 ? 아니면 이러한 서버 프레임워크에서 짜놓은 틀은 어쩔 수 없는 것일까? 혹은 이러한 서버 프레임워크의 구조는 객체지향적 설계의 개념을 고려할만한 대상이 아닌 것일까 ?</p>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2023.05.30의 깨달음]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2023/05/30/</link>
