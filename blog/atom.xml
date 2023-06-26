@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seongkyu-lim.github.io/Blog/blog</id>
     <title>Seongkyu-lim Blog</title>
-    <updated>2023-06-13T00:00:00.000Z</updated>
+    <updated>2023-06-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seongkyu-lim.github.io/Blog/blog"/>
     <subtitle>Seongkyu-lim Blog</subtitle>
     <icon>https://seongkyu-lim.github.io/Blog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[2023.06.26의 깨달음]]></title>
+        <id>/2023/06/26/</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2023/06/26/"/>
+        <updated>2023-06-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[어떤 테이블의 컬럼이 추가되어야하는 상황일 때, entity에만 컬럼을 추가하고 조회와 같은 로직을 수행하면 (db에는 컬럼 추가 x) 해당 컬럼이 없다는 에러를 낸다.]]></summary>
+        <content type="html"><![CDATA[<p>어떤 테이블의 컬럼이 추가되어야하는 상황일 때, entity에만 컬럼을 추가하고 조회와 같은 로직을 수행하면 (db에는 컬럼 추가 x) 해당 컬럼이 없다는 에러를 낸다.</p><p>반대로 db에있는 컬럼이 매핑되는 엔티티에 없더라도 에러를 내지 않는다.</p><p>특정 컬럼이 추가되는 경우 반드시 DB에 먼저 추가한 후, 엔티티를 수정하여 반영하자.
+반대로 특정 컬럼을 수정, 삭제하는 경우에는 엔티티에 먼저 작업을 하고 db에 해당된 컬럼을 수정, 삭제하자.</p>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="enlightenment" term="enlightenment"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2023.06.13의 궁금증]]></title>
         <id>/2023/06/13/</id>
