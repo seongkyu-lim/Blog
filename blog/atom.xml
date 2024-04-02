@@ -2,11 +2,50 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seongkyu-lim.github.io/Blog/blog</id>
     <title>Seongkyu-lim Blog</title>
-    <updated>2024-03-24T00:00:00.000Z</updated>
+    <updated>2024-03-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seongkyu-lim.github.io/Blog/blog"/>
     <subtitle>Seongkyu-lim Blog</subtitle>
     <icon>https://seongkyu-lim.github.io/Blog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[2024.03.31의 궁금증]]></title>
+        <id>/2024/03/31/question</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/03/31/question"/>
+        <updated>2024-03-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[- 구현이 아닌 추상화에 의존해야하는 이유.]]></summary>
+        <content type="html"><![CDATA[<ul><li>구현이 아닌 추상화에 의존해야하는 이유.</li><li>전략 패턴 (Strategy Pattern)</li><li>서브 클래스(sub class), 구성(composition)</li><li>데코레이터 패턴이  객체에 추가 요소를 왜 동적으로 더하는 거지 ?<ul><li>인스턴스를 인자로 넣어서 데코레이팅 할 수 있으니깐 ? (인스턴스는 런타임 환경에서 생성됨.)</li></ul></li></ul>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="question" term="question"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024.03.31의 깨달음]]></title>
+        <id>/2024/03/31/</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/03/31/"/>
+        <updated>2024-03-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[- 객체지향적으로 코드를 설계하는 것]]></summary>
+        <content type="html"><![CDATA[<ul><li>객체지향적으로 코드를 설계하는 것<ul><li>굉장히 많은 노력과 시간을 요구하는 일이다. 디자인 패턴은 단순히 상속, 캡슐화, 다형성, 추상화, 등의 기본적인 객체지향 개념을 적용하는 것에서 더 나아가 여러 상황들에 대해 객체지향적으로 디자인하는 방법을 이미 여러 고민 끝에 정리한 개념이다.</li></ul></li><li>옵저버 패턴<ul><li>여러 객체의 데이터를 일관성 있게 관리할 수 있도록도 할 수 있을 것이고 동시에 여러 객체의 행위를 통제할 때도 사용할 수 있을 것 같다.</li><li>subject 구현 클래스가 observer 구현 클래스를 관리.</li><li>한 객체의 상태가 바뀌면 그 객체에 의존하는 다른 객체에게 연락이 가고 자동으로 내용이 갱신되는 방식으로 일대다 의존성을 정의한다.</li></ul></li><li>데코레이터 패턴<ul><li>슈퍼 클래스와 데코레이터 클래스들이 공통된 형식의 추상 데코레이터 클래스를 상속 받고(1), 데코레이터들은 메인 클래스의 기능에 추가 기능을 데코레이팅(2) 하는 것이 특징적이다.</li><li>데코레이터 패턴을 적용하면 잡다한 클래스가 많아진다는 단점 존재하지만 데코레이터 패턴을 활용해서 만든 API는 사용자가 원하는 행동을 추가로 쉽게 적용할 수 있다.</li></ul></li></ul>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="enlightenment" term="enlightenment"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024.03.29의 깨달음]]></title>
+        <id>/2024/03/29/</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/03/29/"/>
+        <updated>2024-03-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notification System]]></summary>
+        <content type="html"><![CDATA[<p>Notification System</p><ul><li>type = sms, email, ios push notification, aos push notification</li><li>Use APNS(Apple Push Notification Service) When noti to ios.</li><li>Use FCM(Firbase Cloud Messaging) when noti to aos.</li><li>In China, Use Jpush, PushY instead of FCM.</li></ul>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="enlightenment" term="enlightenment"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2024.03.24의 궁금증]]></title>
         <id>/2024/03/24/question</id>
