@@ -4,10 +4,18 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Sun, 31 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 04 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[question]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/04/question</link>
+            <guid>/2024/04/04/question</guid>
+            <pubDate>Thu, 04 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- DTO Naming Convention]]></description>
+            <content:encoded><![CDATA[<ul><li>DTO Naming Convention<ul><li>request, response라는 이름과 dto를 함께 사용?</li><li>name + httpmethod + request,response + dto 라는 형식으로 적용해봄.</li><li>dto 이름이 길어지게 된다.</li></ul></li></ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[2024.03.31의 궁금증]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2024/03/31/question</link>

@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seongkyu-lim.github.io/Blog/blog</id>
     <title>Seongkyu-lim Blog</title>
-    <updated>2024-03-31T00:00:00.000Z</updated>
+    <updated>2024-04-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seongkyu-lim.github.io/Blog/blog"/>
     <subtitle>Seongkyu-lim Blog</subtitle>
     <icon>https://seongkyu-lim.github.io/Blog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[question]]></title>
+        <id>/2024/04/04/question</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/04/04/question"/>
+        <updated>2024-04-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[- DTO Naming Convention]]></summary>
+        <content type="html"><![CDATA[<ul><li>DTO Naming Convention<ul><li>request, response라는 이름과 dto를 함께 사용?</li><li>name + httpmethod + request,response + dto 라는 형식으로 적용해봄.</li><li>dto 이름이 길어지게 된다.</li></ul></li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2024.03.31의 궁금증]]></title>
         <id>/2024/03/31/question</id>
