@@ -2,11 +2,50 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seongkyu-lim.github.io/Blog/blog</id>
     <title>Seongkyu-lim Blog</title>
-    <updated>2024-04-06T00:00:00.000Z</updated>
+    <updated>2024-04-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seongkyu-lim.github.io/Blog/blog"/>
     <subtitle>Seongkyu-lim Blog</subtitle>
     <icon>https://seongkyu-lim.github.io/Blog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[2024.04.09의 궁금증]]></title>
+        <id>/2024/04/09/question</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/04/09/question"/>
+        <updated>2024-04-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[1. declaring type of typescript]]></summary>
+        <content type="html"><![CDATA[<ol><li>declaring type of typescript<ul><li>타입스크립트에서 함수도 타입으로 지정이 가능하다. 다른 언어도 가능한가 ? 어떤 원리인가 ?</li></ul></li></ol>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="question" term="question"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024.04.09의 깨달음]]></title>
+        <id>/2024/04/09/</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/04/09/"/>
+        <updated>2024-04-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[1. prepared statement in Postgresql]]></summary>
+        <content type="html"><![CDATA[<ol><li>prepared statement in Postgresql</li><li>SOLID</li><li>static factory method naming convention<ul><li><a href="https://ibnahmadmohamed.medium.com/design-patterns-factory-method-naming-conventions-5e843b1cdbaf" target="_blank" rel="noopener noreferrer">https://ibnahmadmohamed.medium.com/design-patterns-factory-method-naming-conventions-5e843b1cdbaf</a></li></ul></li><li>d.ts and .ts file in typescript<ul><li><a href="https://findmypiece.tistory.com/223" target="_blank" rel="noopener noreferrer">https://findmypiece.tistory.com/223</a></li></ul></li></ol>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="enlightenment" term="enlightenment"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024.04.08의 궁금증]]></title>
+        <id>/2024/04/08/qeustion</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/04/08/qeustion"/>
+        <updated>2024-04-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[1. 서비스에 알림기능이 도입된다. 알림 종류는 sms 푸쉬 알림만 있다. 알림 케이스는 20가지 정도, 알림 서버 별도로 필요할까 ?]]></summary>
+        <content type="html"><![CDATA[<ol><li>서비스에 알림기능이 도입된다. 알림 종류는 sms 푸쉬 알림만 있다. 알림 케이스는 20가지 정도, 알림 서버 별도로 필요할까 ?</li></ol>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="question" term="question"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2024.04.06의 깨달음]]></title>
         <id>/2024/04/06/</id>
