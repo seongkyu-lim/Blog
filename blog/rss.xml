@@ -4,10 +4,19 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Tue, 09 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2024.04.10의 궁금증]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/10/question</link>
+            <guid>/2024/04/10/question</guid>
+            <pubDate>Wed, 10 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- trpc, grpc]]></description>
+            <content:encoded><![CDATA[<ul><li>trpc, grpc</li><li>promise.all</li><li>await, async<ul><li>async await을 남용하지말자. 비동기로 동작해도 되는 로직은 굳이 붙일 필요없다.</li></ul></li></ul>]]></content:encoded>
+            <category>question</category>
+        </item>
         <item>
             <title><![CDATA[2024.04.09의 궁금증]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/09/question</link>
