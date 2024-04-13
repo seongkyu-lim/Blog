@@ -4,10 +4,28 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Wed, 10 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 12 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2024.04.12의 궁금증]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/12/question</link>
+            <guid>/2024/04/12/question</guid>
+            <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[1. value-object pattern]]></description>
+            <content:encoded><![CDATA[<ol><li>value-object pattern<ol><li>feature. make and return new object when member value is changed.</li></ol></li><li>백엔드 언어와 프레임워크 사용 추세.<ul><li>한국에서는 go, kotlin(spring)으로 신규프로젝트 진행을 많이 하는 추세.</li><li>kotlin은 과거부터 많이 사용된 java 기반의 spring과 완벽히 호환되기 때문에 전환이 비교적 쉬우나, JVM 기반으로 동작하기 때문에 싫어하는 사람도 많은 것 같다.<ul><li>kotlin은 멀티플랫폼언어이기 때문에 JVM을 사용하지 않고 NATIVE로 바로 컴파일되는 것의 성능이 좋아지면 또 분위기가 바뀔지도 ?</li><li>kotlin이 어떤 원리로 여러 것들로 컴파일될 수 있는지이해해보자, 그리고 이런 독보적인 특징으로 발전 가능성이 어느정도까지 일지 판단해보자.</li></ul></li></ul></li></ol>]]></content:encoded>
+            <category>question</category>
+        </item>
+        <item>
+            <title><![CDATA[2024.04.09의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/11/</link>
+            <guid>/2024/04/11/</guid>
+            <pubDate>Thu, 11 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- nest의 객체 등록, 의존성 주입을 통한 객체 사용은 메모리에 부하를 줄 수도  있을 것이다.]]></description>
+            <content:encoded><![CDATA[<ul><li>nest의 객체 등록, 의존성 주입을 통한 객체 사용은 메모리에 부하를 줄 수도  있을 것이다.<ul><li>불필요하게 남용 X</li><li>메소드가 return되어도 객체가 제거되지 않을 것이기 때문.</li></ul></li><li>다른 하드웨어로의 IO 통신은 시간이 어느정도 줄이는데 한계가 있다. IO를 줄이는 것이  성능 개선에 중요.<ul><li>ex 백엔드 서버와 DB 서버간의 소통. 백엔드 서버와 블록체인 간의 소통.</li></ul></li></ul>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2024.04.10의 궁금증]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/10/question</link>
