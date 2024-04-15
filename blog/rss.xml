@@ -4,10 +4,28 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Fri, 12 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 14 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2024.04.14의 궁금증]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/14/question</link>
+            <guid>/2024/04/14/question</guid>
+            <pubDate>Sun, 14 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- spring-batch 란 ?]]></description>
+            <content:encoded><![CDATA[<ul><li>spring-batch 란 ?</li></ul>]]></content:encoded>
+            <category>question</category>
+        </item>
+        <item>
+            <title><![CDATA[2024.04.14의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/14/</link>
+            <guid>/2024/04/14/</guid>
+            <pubDate>Sun, 14 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[1. "우세종이라고 해서 우리가 그 행성의 주인은 아니에요." - 닭강정]]></description>
+            <content:encoded><![CDATA[<ol><li>"우세종이라고 해서 우리가 그 행성의 주인은 아니에요." - 닭강정</li><li>힘이 세다고 모든 사람이 그 힘을 쓰지는 않는다. - 닭강정</li><li>닭강정에서 인류보다 발달한 외계인은 배려와 친절을 배푸는 방향으로 진화했다!</li></ol>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2024.04.12의 궁금증]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/12/question</link>
