@@ -2,11 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seongkyu-lim.github.io/Blog/blog</id>
     <title>Seongkyu-lim Blog</title>
-    <updated>2024-04-16T00:00:00.000Z</updated>
+    <updated>2024-04-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seongkyu-lim.github.io/Blog/blog"/>
     <subtitle>Seongkyu-lim Blog</subtitle>
     <icon>https://seongkyu-lim.github.io/Blog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[2024.04.17의 궁금증]]></title>
+        <id>/2024/04/17/question</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/04/17/question"/>
+        <updated>2024-04-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[- MSA에서 DB도 분리하는 것의 장점은 ?]]></summary>
+        <content type="html"><![CDATA[<ul><li>MSA에서 DB도 분리하는 것의 장점은 ?</li><li>싱글스레드와 멀티스레드 기반 프레임워크 장단점은 ?</li></ul>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="question" term="question"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024.04.17의 깨달음]]></title>
+        <id>/2024/04/17/</id>
+        <link href="https://seongkyu-lim.github.io/Blog/blog/2024/04/17/"/>
+        <updated>2024-04-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[1. 응용 서비스의 클래스 는 최대 2-3개의 기능이 들어있는 정도로, 중복 코드가 생긴다면, 해당 로직도 별도 클래스로 구현. 책에서 예시로는 응용서비스이름 +Helper라는 이름의 클래스로 정적 메소드로 공통 로직을 처리. 사용하는 응용서비스에서는 의존성 주입을 받는 것이 아니라 정적 메소드 호출해서 사용.]]></summary>
+        <content type="html"><![CDATA[<ol><li>응용 서비스의 클래스 는 최대 2-3개의 기능이 들어있는 정도로, 중복 코드가 생긴다면, 해당 로직도 별도 클래스로 구현. 책에서 예시로는 응용서비스이름 +Helper라는 이름의 클래스로 정적 메소드로 공통 로직을 처리. 사용하는 응용서비스에서는 의존성 주입을 받는 것이 아니라 정적 메소드 호출해서 사용.</li><li>응용 서비스의 인터페이스를 만드는 것에 대해서 구현 클래스가 여러개라면 인터페이스를 만드는 것이 좋겠지만 경험적으로 응용 서비스가 구현 클래스가 여러개이거나 런타임 때 교체할 일이 거의 없다고 한다. 테스트 코드를 작성할 때에도 mockito와 같은 라이브러리를 사용하면 구체 클래스에 대해서도 목개게를 만들어주기 떄문에 응용 서비스에서 인터페이스 사용은 거의 안하는 것을 제안함.  - 도메인 주도 개발 시작하기 / 최범균</li></ol>]]></content>
+        <author>
+            <name>Lim SeongKyu</name>
+            <uri>https://github.com/seongkyu-lim</uri>
+        </author>
+        <category label="enlightenment" term="enlightenment"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2024.04.16의 궁금증]]></title>
         <id>/2024/04/16/question</id>
