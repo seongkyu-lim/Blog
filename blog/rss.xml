@@ -4,10 +4,28 @@
         <title>Seongkyu-lim Blog</title>
         <link>https://seongkyu-lim.github.io/Blog/blog</link>
         <description>Seongkyu-lim Blog</description>
-        <lastBuildDate>Fri, 19 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 24 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2024.04.24의 궁금증]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/24/question</link>
+            <guid>/2024/04/24/question</guid>
+            <pubDate>Wed, 24 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- db 상에 연관관계를 맺는 것과 id만 보관하는 것에 대해서 성능상의 장단점도 있을까 ?]]></description>
+            <content:encoded><![CDATA[<ul><li>db 상에 연관관계를 맺는 것과 id만 보관하는 것에 대해서 성능상의 장단점도 있을까 ?</li></ul>]]></content:encoded>
+            <category>question</category>
+        </item>
+        <item>
+            <title><![CDATA[2024.04.21의 깨달음]]></title>
+            <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/21/</link>
+            <guid>/2024/04/21/</guid>
+            <pubDate>Sun, 21 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- lock ( Pessimistic, Optimistic )]]></description>
+            <content:encoded><![CDATA[<ul><li>lock ( Pessimistic, Optimistic )</li><li>event</li><li>CQRS</li></ul>]]></content:encoded>
+            <category>enlightenment</category>
+        </item>
         <item>
             <title><![CDATA[2024.04.19의 궁금증]]></title>
             <link>https://seongkyu-lim.github.io/Blog/blog/2024/04/19/question</link>
