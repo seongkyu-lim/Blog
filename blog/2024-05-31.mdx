@@ -1,0 +1,28 @@
+---
+<!-- slug: enlightenment -->
+title: 2024.05.31의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+- [anyORM](https://velog.io/@kisuk623/%EC%99%9C-Prisma%EB%A5%BC-%EC%8D%A8%EC%95%BC%ED%95%A0%EA%B9%8C-anyORM)
+- prisma
+  - typeORM에서 한단계 더 추상화되어 개발자 친화적인 느낌.
+  - 쿼리메소드에 entity를 넣는 방식이 아니며 특정 형식의 객체를 넣는데, 연관관계의 데이터도 객체에 특정형식으로 하나의 로직으로 처리할 수 있다.
+    ex)
+
+```
+user = {
+	email: 'elsa@prisma.io',
+	name: 'Elsa Prisma',
+	posts: {
+		create: {
+			title: 'Include this post!',
+		},
+	},
+}
+
+```
+
+- queryBuilder와 같이 SQL에 가까운 로직도 작성가능한가 ?
+- [migration CLI reference](https://www.prisma.io/docs/orm/reference/prisma-cli-reference)
