@@ -1,0 +1,11 @@
+---
+<!-- slug: enlightenment -->
+title: 2024.06.11의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+1. gradle multi module project setting
+   - 목적과 목표 : 그레들 모듈이 복수개일 경우, 그래들 빌드 로직 중 공통적으로 사용되는 부분을 공용으로 두어 관리하는 것이 수정 및 관리에 용이.
+2. [그래들 멀티 모듈 세팅 시 subProjects, allProjects 대신 plugin systems(with buildSrc)를 사용하는 것을 권장.](https://docs.gradle.org/7.4/userguide/sharing_build_logic_between_subprojects.html#sec:convention_plugins_vs_cross_configuration)
+   - 이유로 최상위 build.gradle.kts의 subProjects, allProjects에 모든 subProject에 적용되는 빌드 설정을 세팅했을 때, subProject들이 복잡해지면서 확장에 불편함이 생길 수 있다. 따라서 plugin system을 활용해서 커스텀하게 plugin들을 만들고 subProject의 build.gradle.kts에서 가져와 사용하도록 권장.
