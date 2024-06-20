@@ -1,0 +1,15 @@
+---
+<!-- slug: enlightenment -->
+title: 2024.06.12의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+1. dockerfile에서 커맨드를 실행할 때 기준이되는 디렉토리는 ?
+   - 도커 이미지 빌드 시 설정한 빌드컨텍스트가 기준디렉토리가 된다.
+   - 빌드 컨텍스트는 docker build 시 설정해줄 수 있다.
+     - [docker official site - build context](https://docs.docker.com/build/building/context/)
+   - 따라서 dockerfile에서 copy . . 커맨드를 입력했을 때, 첫 번 째 .은 build context의 위치가 된다.
+2. WORKDIR 는 작업 디렉토리를 설정하는 커맨드이다. workdir 설정 이후의 커맨드들은 해당 작업 디렉토리를 기준으로 실행된다.
+3. dockfile을 작성 시 dockerfile을 실행하는 로컬의 경로와 dockerfile 이미지가 실행되었을 때 가상 환경의 경로에 대해 생각이 필요함을 깨달 았다.
+4. DDD 방법론을 적용하기위해 도입해볼만한 아키텍처 : 클린 아키텍처, 헥사고날 아키텍처,
