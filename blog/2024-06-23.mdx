@@ -1,0 +1,19 @@
+---
+<!-- slug: enlightenment -->
+title: 2024.06.23의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+1. chapter01 예제 - 만들면서 배우는 헥사고날 아키텍처 설계와 구현
+
+- outbound
+  - port - interface
+  - adaptor - port 구현
+- outbound 상황에서는 adaptor가 port를 구현함으로써 저수준인 adaptor가 고수준인 application 계층에 의존하도록 함.
+- inbound
+  - port - usecase 구현
+  - usecase - interface
+  - adaptor - usecase(interface) 타입 객체에 구체 클래스인 port를 지정해줌.
+- inbound상황에서는 usecase라는 Inteface가 명세서의 역할만하고 adaptor는 구현체 port를 바로 의존해서 의존성역전은 하지 않은 채 그대로 저수준인 adaptor가 고수준인 application을 의존함.
+- inbound와 outbound상황에서 port의 타입과 역할이 달라서 주의 필요.
