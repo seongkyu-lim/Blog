@@ -1,0 +1,16 @@
+---
+<!-- slug: enlightenment -->
+
+title: 2024.07.22의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+- Promise.all
+  - Promise 객체들에 대한 병렬 처리가 가능하다.
+  - async 함수들을 await을 빼서 실행하게 되어도 비동기적으로 동작하여 병렬적으로 동작할 수 있지만 종료 시점을 보장할 수 없게 된다.
+  - Promise를 상용하면 병렬적으로 처리하면서 종료 시점을 보장할 수 있다.
+  - 이것이 Promise.all기능이 있는 이유라 생각되는데 맞는지 찾아보기.
+- repository.update( {id: id}, { quantity: () => `quantity - ${quantity}`}); 쿼리로는 ~이며 race condition을 해결해준다?
+  - 업데이트 치는 시점에 데이터를 체크해서 갱신한다.
+  - 즉 별도의 로직 필요없이 바로 특정 값을 업데이트하면 되는 상황에서는 해결이 된다.
