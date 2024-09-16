@@ -1,0 +1,11 @@
+---
+<!-- slug: enlightenment -->
+
+title: 2024.07.11의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+- postgresql - date_trunc() 메소드
+  - 첫번쨰 인자로 날짜 형식 (year, month, day, hour, minute, second, millisecond) , 두번 째인자로 timestamp 타입의 데이터가 들어감.
+  - trunc(버림)을 날짜에 적용해서 year을 넣으면 뒤에는 01-01 00:00:00, month를 넣으면 -01 00:00:00, minute을 넣으면 30:00 형식으로 뒤에가 버려짐.
