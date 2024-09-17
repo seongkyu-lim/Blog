@@ -1,0 +1,11 @@
+---
+<!-- slug: question -->
+title: 2024.07.25의 궁금증
+authors: [seongkyu]
+tags: [question]
+---
+
+- 다중 컬럼 인덱스를 걸었을 때 쿼리문에서 컬럼 순서가 맞지 않으면 인덱싱할 수 없다. 이유는 ? #realmysql2
+- group by, order by에 인덱스가 사용되는 것은 어떻게 사용되는 것인가 ? #realmysql2
+  - group by는 group by에 명시된 컬럼 데이터가 같은 것 끼리 묶으니깐 같은 것들을 탐색할 때
+  - order by는 order by에 명시한 컬럼의 데이터들을 서로 비교해서 정렬해야하기 때문에 값들을 탐색하여 정렬할 때 사용될 수 있겠다. (인덱스는 모든 컬럼이 오름차순으로 정렬되있기 때문에 order by의 모든 절의 정렬방향이 같을 때 사용 가능.)
