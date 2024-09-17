@@ -1,0 +1,13 @@
+---
+<!-- slug: enlightenment -->
+
+title: 2024.08.01의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+- dto에 대해서 validator를 사용하지 않으면 외부에서 입력받는 값의 타입을 검증할 방법이 없다. 설령 dto에 타입을 명시해 놓더라도.
+  - typescript (컴파일후 javascript)여서 그렇다. 강타입언어는 타입을 체크해서 에러를 낼 것임. ex ) java
+- nestjs에서 주로 사용하는 class-validator 라이브러리의 IsArray()를 붙이더라도 배열 안의 요소들에 대한 타입 체크도 별도로 해줄 필요가 있다.
+- class-validator에서 별도로 배열안의 값들 타입을 검증하는 방법이 없다 ?
+- transform과 validator가 함께 있을 때 일반적으로 transform이 먼저 동작한다.
