@@ -1,0 +1,11 @@
+---
+sidebar_position: 2
+title: [데브원영] 아파치 카프카 for beginners
+---
+
+- 카프카는 source application과 target application 사이의 결합도를 낮추기위해 나왔다.
+- partition은 늘릴 수는 있지만 다시 줄일 수 없기 떄문에 늘릴 때 신중해야한다.
+- broker는 카프카 서버단위를 의미.
+- replication은 Partion의 복제본을 의미. (replication이 3이면 원본 하나, 복제본 2개가 있으며 브로커의 갯수에 제한을 가진다. 레플리케이션이 3이려면 최소 3개의 브로커 필요.)
+- ISR은 원본 파티션(리더)과 복제 파티션(팔로워)의 묶음을 의미.
+- keyword : topic, amqp, partition, replication, broker, ISR,
