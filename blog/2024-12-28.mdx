@@ -1,0 +1,10 @@
+---
+<!-- slug: enlightenment -->
+
+title: 2024.12.28의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+- typeorm find() 메소드의 반환값 객체는 온전한 엔티티 클래스의 인스턴스 인데, save()의 반환 값은 class object가 아닌 plain object이어서 해당 객체의 메소드를 실행하려고 하면 not a function이라고 컴파일 시점에 에러는 안나는데 런타임 시 에러난다.
+  - builder-pattern 라이브러리의 Builder<>도 마찬가지로 class object가 아닌 plain object 반환하는 것 같다.
