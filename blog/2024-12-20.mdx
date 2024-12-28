@@ -1,0 +1,12 @@
+---
+<!-- slug: enlightenment -->
+
+title: 2024.12.20의 깨달음
+authors: [seongkyu]
+tags: [enlightenment]
+---
+
+- 동기 처리도 이벤트를 통해 처리할 수 있다. 이렇게 했을 때 장점으로 서로 다른 도메인 로직이 섞이는 것을 방지할 수 있다.
+  - 여기서 도메인 로직은 바운디드 컨텍스트 범위 ? 엔티티 단위의 로직 ?
+  - spring -> ApplicationEventPublisher, @EventListener
+- aggregate, bounded context
